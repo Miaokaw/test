@@ -1,0 +1,16 @@
+{
+    "files.associations": {
+        "functional": "c",
+        "optional": "c",
+        "system_error": "c",
+        "array": "c",
+        "tuple": "c",
+        "type_traits": "c",
+        "utility": "c",
+        "stm32f1xx_hal_tim.h": "c",
+        "usmart_port.h": "c",
+        "usartmanage.h": "c",
+        "menu.h": "c",
+        "gpio.h": "c"
+    }
+}
