@@ -106,10 +106,12 @@ void mainMenAction(menuItem *t)
                 mainMenuPoint++;
                 showMenu(showMenuer);
                 HAL_Delay(100);
+                break;
             case KEY1_PRES:
                 mainMenuPoint--;
                 showMenu(showMenuer);
                 HAL_Delay(100);
+                break;
             case KEY_UP_PRES:
                 showMenu(showMenuer);
                 if (t->son != NULL)
