@@ -11,6 +11,7 @@
  uint8_t remoteFlag = 0;
  uint32_t remoteData = 0; /* 红外接收到的数据 */
  uint8_t  remoteCnt = 0;  /* 按键按下的次数 */
+ uint8_t lastSta = 0;
 
  void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
  {
@@ -114,7 +115,7 @@ uint8_t remoteScan(void)
              t1 = (remoteData >> 16) & 0xff;
              t2 = (remoteData >> 24) & 0xff;
 
-             if (t1 == (uint8_t)~t2)
+             if (t1 == (uint8_t)~t2 && t1 != lastSta)
              {
                  sta = t1;           /* 键值正确 */
              }
@@ -125,6 +126,10 @@ uint8_t remoteScan(void)
              remoteFlag &= ~(1 << 6);  /* 清除接收到有效按键标识 */
              remoteCnt = 0;           /* 清除按键次数计数器 */
          }
+     }
+     if (sta != 0)
+     {
+         lastSta = sta;
      }
      return sta;
  }

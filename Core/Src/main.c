@@ -25,6 +25,7 @@
 #include "usart.h"
 #include "gpio.h"
 #include "fsmc.h"
+
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -150,6 +151,13 @@ showMenuer = mainMenu;
             {
             case 69:
                 str = "1    ";
+                while (1){
+                    
+                key = remoteScan();
+                if (key == 69) break;
+                showMenu(showMenuer, 0);
+                showMenuer->action(showMenuer);
+                }
                 break;
             case 70:
                 str = "2    ";
@@ -202,9 +210,9 @@ showMenuer = mainMenu;
             default:
                 str = "NULL ";
                 break;
-            
             }
-            oledShowStr(0, 7, str, 1);
+            //oledShowStr(0, 7, str, 1);
+
         }
         else
         {

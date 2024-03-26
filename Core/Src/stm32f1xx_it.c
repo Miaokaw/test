@@ -230,25 +230,6 @@ void RTC_IRQHandler(void)
 }
 
 /**
-  * @brief This function handles USB low priority or CAN RX0 interrupts.
-  */
-void USB_LP_CAN1_RX0_IRQHandler(void)
-{
-  /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 0 */
-  uint8_t rxBuf[8];
-  uint32_t id;
-  /* USER CODE END USB_LP_CAN1_RX0_IRQn 0 */
-  HAL_CAN_IRQHandler(&hcan);
-  /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 1 */
-  // 接收�?包数�?
-  canReceiveMsg(id, rxBuf);
-  // �?帧数据接收完成，置位帧标志位
-  canRxFlag = 1;
-//  canMsgProcess();
-  /* USER CODE END USB_LP_CAN1_RX0_IRQn 1 */
-}
-
-/**
   * @brief This function handles DMA1 channel3 global interrupt.
   */
 void DMA1_Channel3_IRQHandler(void)
@@ -260,6 +241,25 @@ void DMA1_Channel3_IRQHandler(void)
   /* USER CODE BEGIN DMA1_Channel3_IRQn 1 */
 
   /* USER CODE END DMA1_Channel3_IRQn 1 */
+}
+
+/**
+  * @brief This function handles USB low priority or CAN RX0 interrupts.
+  */
+void USB_LP_CAN1_RX0_IRQHandler(void)
+{
+  /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 0 */
+  uint8_t rxBuf[8];
+  uint32_t id;
+  /* USER CODE END USB_LP_CAN1_RX0_IRQn 0 */
+  HAL_CAN_IRQHandler(&hcan);
+  /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 1 */
+  // 接收�??包数�??
+  canReceiveMsg(id, rxBuf);
+  // �??帧数据接收完成，置位帧标志位
+  canRxFlag = 1;
+//  canMsgProcess();
+  /* USER CODE END USB_LP_CAN1_RX0_IRQn 1 */
 }
 
 /**

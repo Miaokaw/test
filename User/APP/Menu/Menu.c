@@ -12,7 +12,6 @@
 struct _menuItem *head = NULL;
 struct _menuItem *showMenuer = NULL;
 struct _menuItem *getEnd = NULL;
-
 /**
  * 创建一个菜单项并将其添加到父菜单中
  *
@@ -63,7 +62,7 @@ menuItem *createMenu(char *name, menuItem *father, int sonNum, void (*action)())
     return temp; // 返回新创建的菜单项
 }
 
-void showMenu(menuItem *shower)
+void showMenu(menuItem *shower, uint8_t choosePoint)
 {
     oledCLS();
     HAL_Delay(10);
@@ -72,13 +71,13 @@ void showMenu(menuItem *shower)
     if (shower->son != NULL)
     {
         getEnd = shower->son;
-        do
-        {
-            oledShowStr(2, hang, (uint8_t *)getEnd->menuName, 1);
+        do{
+            oledShowStr(18, hang, (uint8_t *)getEnd->menuName, 1);
             hang++;
             getEnd = getEnd->next;
         } while (getEnd != NULL);
     }
+    if (choosePoint != 0) oledShowStr(0, choosePoint+1, (uint8_t *)">>", 1);
 }
 
 void mainMenuAction(menuItem *t)
@@ -88,48 +87,49 @@ void mainMenuAction(menuItem *t)
     uint8_t isChange = 0;
     while (1)
     {
-        mainMenuKey = keyScan(0);
+        mainMenuKey = remoteScan();
         if (mainMenuKey)
         {
             switch (mainMenuKey)
             {
-            case KEY0_PRES:
-                mainMenuPoint++;
-				if (mainMenuPoint >= t->sonNum){
-					mainMenuPoint = 0;
-				} 
-                showMenu(showMenuer);
-                HAL_Delay(100);
-                break;
-            case KEY1_PRES:
-                mainMenuPoint--;
-				if (mainMenuPoint < 0){
-					mainMenuPoint = t->sonNum;
-				}
-                showMenu(showMenuer);
-                HAL_Delay(100);
-                break;
-            case KEY_UP_PRES:
-                showMenu(showMenuer);
-                if (t->son != NULL)
-                {
-                    getEnd = t->son;
-                }
-                while (mainMenuPoint && getEnd->next != NULL)
-                {
-                    getEnd = getEnd->next;
+                case 82:
+                    mainMenuPoint++;
+                    if (mainMenuPoint){
+                        mainMenuPoint = 1;
+                    } 
+                    showMenu(showMenuer, mainMenuPoint);
+                    HAL_Delay(100);
+                    beepBeep(1);
+                    break;
+                case 24:
                     mainMenuPoint--;
-                }
-                showMenuer = getEnd;
-                showMenu(showMenuer);
-                isChange = 1;
-                break;
-			case KEY_EXIT:
-				showMenuer = t->back;
-				isChange = 1;
-				break;
-            default:
-                break;
+                    if (mainMenuPoint == 0){
+                        mainMenuPoint = t->sonNum;
+                    }
+                    showMenu(showMenuer, mainMenuPoint);
+                    HAL_Delay(100);
+                    break;
+                case 28:
+                    showMenu(showMenuer, mainMenuPoint);
+                    if (t->son != NULL)
+                    {
+                        getEnd = t->son;
+                    }
+                    while (mainMenuPoint && getEnd->next != NULL)
+                    {
+                        getEnd = getEnd->next;
+                        mainMenuPoint--;
+                    }
+                    showMenuer = getEnd;
+                    isChange = 1;
+                    break;
+                case 13:
+                    showMenuer = t->back;
+                    showMenu(showMenuer, 0);
+                    isChange = 1;
+                    break;
+                default:
+                    break;
             }
         }
         else

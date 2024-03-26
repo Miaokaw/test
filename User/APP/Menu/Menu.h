@@ -15,6 +15,6 @@ extern menuItem *head;
 extern menuItem *showMenuer;
 
 menuItem *createMenu(char *name, menuItem *father, int sonnum, void (*action)());
-void showMenu(menuItem *shower);
+void showMenu(menuItem *shower, uint8_t choosePoint);
 void mainMenuAction(menuItem *t);
 #endif /* __MENU_H__ */
