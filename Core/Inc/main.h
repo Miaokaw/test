@@ -41,13 +41,14 @@ extern "C" {
 #include "../../User/BSP/Led/Led.h"
 #include "../../User/BSP/Key/Key.h"
 #include "../../User/BSP/EEPROM/EEPROM.h"
+#include "../../User/BSP/Remote/Remote.h"
 #include "../../User/APP/Menu/Menu.h"
 #include "../../User/Tools/Delay/Delay.h"
 #include "../../User/Tools/Tools/TOOLS.h"
 #include "../../User/Control/Process/Process.h"
 #include "../../User/Control/ServoControl/ServoControl.h"
 #include "../../User/Control/SteppingMotorControl/SteppingMotorControl.h"
-#include "../../User/Manager/UsartManage/UsartManage.h"
+#include "../../User/Manager/MsgManage/MsgManage.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -77,6 +78,7 @@ void Error_Handler(void);
 #define ARR 0xFFFF - 1
 #define USMART_ARR 1000
 #define USMART_PSC 72 * 100 - 1
+#define BRP 4
 #define BEEP_Pin GPIO_PIN_2
 #define BEEP_GPIO_Port GPIOE
 #define KEY1_Pin GPIO_PIN_3
@@ -87,8 +89,6 @@ void Error_Handler(void);
 #define LED_GPIO_Port GPIOE
 #define LIGHT_KEY6_Pin GPIO_PIN_6
 #define LIGHT_KEY6_GPIO_Port GPIOE
-#define LIGHT_KEY1_Pin GPIO_PIN_6
-#define LIGHT_KEY1_GPIO_Port GPIOF
 #define LIGHT_KEY2_Pin GPIO_PIN_7
 #define LIGHT_KEY2_GPIO_Port GPIOF
 #define LIGHT_KEY3_Pin GPIO_PIN_8
@@ -107,8 +107,8 @@ void Error_Handler(void);
 #define MOTOR3_DIR_GPIO_Port GPIOC
 #define KEY_UP_Pin GPIO_PIN_0
 #define KEY_UP_GPIO_Port GPIOA
-#define MOTOR5_TIM_Pin GPIO_PIN_1
-#define MOTOR5_TIM_GPIO_Port GPIOA
+#define REMOTE_TIM_Pin GPIO_PIN_1
+#define REMOTE_TIM_GPIO_Port GPIOA
 #define MOTOR1_EN_Pin GPIO_PIN_4
 #define MOTOR1_EN_GPIO_Port GPIOC
 #define MOTOR3_EN_Pin GPIO_PIN_5
@@ -123,8 +123,6 @@ void Error_Handler(void);
 #define MOTOR2_EN_GPIO_Port GPIOG
 #define FLASH_HOLD_Pin GPIO_PIN_7
 #define FLASH_HOLD_GPIO_Port GPIOG
-#define FLASH_WP_Pin GPIO_PIN_8
-#define FLASH_WP_GPIO_Port GPIOG
 #define MOTOR2_TIM_Pin GPIO_PIN_6
 #define MOTOR2_TIM_GPIO_Port GPIOC
 #define MOTOR1_TIM_Pin GPIO_PIN_10
@@ -133,6 +131,8 @@ void Error_Handler(void);
 #define MOTOR5_EN_GPIO_Port GPIOG
 #define MOTOR5_DIR_Pin GPIO_PIN_15
 #define MOTOR5_DIR_GPIO_Port GPIOG
+#define MOTOR5_TIM_Pin GPIO_PIN_3
+#define MOTOR5_TIM_GPIO_Port GPIOB
 #define I2C_SCL_Pin GPIO_PIN_8
 #define I2C_SCL_GPIO_Port GPIOB
 #define I2C_SDA_Pin GPIO_PIN_9

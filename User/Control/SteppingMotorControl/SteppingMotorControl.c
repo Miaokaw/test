@@ -438,17 +438,6 @@ void motorStateUpgrade(MotorControl *motor)
             break;
         case IDLE: /* 空闲状态 */
             break;
-        // case FINE_ADJUST:
-        //     if (motor->pid.output < 0)
-        //     {
-        //         motor->pid.output = -motor->pid.output;
-        //         motor->dir = BACKWARD;
-        //     }
-        //     else
-        //         motor->dir = FORWARD;
-        //     motorDirChange(motor);
-        //     motor->pulse = (uint16_t)(FREQ / motor->pid.output / 2);
-        //     break;
         default:
             break;
         }

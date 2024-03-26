@@ -71,7 +71,7 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(MOTOR4_EN_GPIO_Port, MOTOR4_EN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOG, MOTOR2_EN_Pin|FLASH_HOLD_Pin|FLASH_WP_Pin|MOTOR5_EN_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOG, MOTOR2_EN_Pin|FLASH_HOLD_Pin|GPIO_PIN_8|MOTOR5_EN_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(MOTOR5_DIR_GPIO_Port, MOTOR5_DIR_Pin, GPIO_PIN_SET);
@@ -108,9 +108,9 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(LIGHT_KEY6_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PFPin PFPin PFPin PFPin
+  /*Configure GPIO pins : PF6 PFPin PFPin PFPin
                            PFPin */
-  GPIO_InitStruct.Pin = LIGHT_KEY1_Pin|LIGHT_KEY2_Pin|LIGHT_KEY3_Pin|LIGHT_KEY4_Pin
+  GPIO_InitStruct.Pin = GPIO_PIN_6|LIGHT_KEY2_Pin|LIGHT_KEY3_Pin|LIGHT_KEY4_Pin
                           |LIGHT_KEY5_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_INPUT;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -150,9 +150,9 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_HIGH;
   HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : PGPin PGPin PGPin PGPin
+  /*Configure GPIO pins : PGPin PGPin PG8 PGPin
                            PGPin */
-  GPIO_InitStruct.Pin = MOTOR2_EN_Pin|FLASH_HOLD_Pin|FLASH_WP_Pin|MOTOR5_EN_Pin
+  GPIO_InitStruct.Pin = MOTOR2_EN_Pin|FLASH_HOLD_Pin|GPIO_PIN_8|MOTOR5_EN_Pin
                           |MOTOR5_DIR_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
