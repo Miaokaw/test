@@ -8,21 +8,32 @@ test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 test\usartmanage.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 test\usartmanage.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 test\usartmanage.o: ../Drivers/CMSIS/Include/core_cm3.h
+<<<<<<< HEAD
+test\usartmanage.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+=======
 test\usartmanage.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdint.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\usartmanage.o: ../Drivers/CMSIS/Include/cmsis_version.h
 test\usartmanage.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 test\usartmanage.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 test\usartmanage.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+<<<<<<< HEAD
+test\usartmanage.o: E:\keil\ARM\ARMCC\Bin\..\include\stddef.h
+=======
 test\usartmanage.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stddef.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
+<<<<<<< HEAD
+=======
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
@@ -34,10 +45,17 @@ test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\usartmanage.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+<<<<<<< HEAD
+test\usartmanage.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+test\usartmanage.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+test\usartmanage.o: E:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+test\usartmanage.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
+=======
 test\usartmanage.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
 test\usartmanage.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
 test\usartmanage.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 test\usartmanage.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\usartmanage.o: ../Core/Inc/malloc.h
 test\usartmanage.o: ../Core/Inc/main.h
 test\usartmanage.o: ../Core/Inc/../../User/BSP/OLED/OLED.h
@@ -53,6 +71,10 @@ test\usartmanage.o: ../Core/Inc/../../User/APP/Menu/Menu.h
 test\usartmanage.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\usartmanage.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\usartmanage.o: ../Core/Inc/usart.h
+<<<<<<< HEAD
+test\usartmanage.o: ../Core/Inc/../../User/Usart/MyUsart.h
+=======
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\usartmanage.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\usartmanage.o: ../Core/Inc/tim.h
 test\usartmanage.o: ../Core/Inc/../../User/Manager/UsartManage/UsartManage.h

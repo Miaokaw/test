@@ -19,12 +19,12 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "can.h"
+#include "dma.h"
 #include "rtc.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 #include "fsmc.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -81,7 +81,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  FormData_Init(&OpennMv_Data);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -93,6 +93,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_FSMC_Init();
   MX_TIM1_Init();
   MX_TIM2_Init();
@@ -119,7 +120,22 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
+	menuItem *mainMenu = createMenu("MainMenu", NULL, 0, mainMenuAction);
+	menuItem *setpMot = createMenu("setpMot", mainMenu, 0, mainMenuAction);
+	menuItem *setpMot_1 = createMenu("setpMot_1", setpMot, 0, NULL);
+	menuItem *setpMot_2 = createMenu("setpMot_2", setpMot, 0, NULL);
 
+
+	menuItem *usartMenu = createMenu("USARTMenu", mainMenu, 0, mainMenuAction);
+	menuItem *usartMenu_1 = createMenu("USARTMenu_1", usartMenu, 0, NULL);
+	menuItem *usartMenu_2 = createMenu("USARTMenu_2", usartMenu, 0, NULL);
+
+	menuItem *iicMenu = createMenu("IICMenu", mainMenu, 0, mainMenuAction);
+	menuItem *iicMenu_1 = createMenu("IICMenu_1", iicMenu, 0, NULL);
+	menuItem *iicMenu_2 = createMenu("IICMenu_2", iicMenu, 0, NULL);
+
+
+showMenuer = mainMenu;
 
   while (1)
   {

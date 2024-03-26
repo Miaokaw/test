@@ -34,14 +34,14 @@ void servoAction(Tools tool, uint16_t targetAngel, uint16_t runTime)
     switch (tool)
     {
         case ARM:
-            runServoAction(0, targetAngel, runTime);
+            runServoAction(0, targetAngel, runTime); //舵机一号和零号是属于臂抬起来
             runServoAction(1, 3000 - targetAngel, runTime);
             break;
         case SPIN:
-            runServoAction(2, targetAngel, runTime);
+            runServoAction(2, targetAngel, runTime); //底盘舵机
             break;
         case CLAW:
-            runServoAction(3, targetAngel, runTime);
+            runServoAction(3, targetAngel, runTime); //爪子旋转
             break;
 
     }

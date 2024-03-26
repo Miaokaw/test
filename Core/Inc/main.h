@@ -49,6 +49,7 @@ extern "C" {
 #include "../../User/Control/ServoControl/ServoControl.h"
 #include "../../User/Control/SteppingMotorControl/SteppingMotorControl.h"
 #include "../../User/Manager/MsgManage/MsgManage.h"
+#include "../../User/Usart/MyUsart.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

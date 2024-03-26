@@ -1,5 +1,5 @@
 #include "Menu.h"
-
+#define KEY_EXIT 3
 // typedef struct _menuItem
 //{
 //     char menuName[20];
@@ -65,35 +65,26 @@ menuItem *createMenu(char *name, menuItem *father, int sonNum, void (*action)())
 
 void showMenu(menuItem *shower)
 {
-    /*
-    oled显示内容
-    */
     oledCLS();
     HAL_Delay(10);
-    oledShowStr(0, 0, (uint8_t *)shower->menuName, 1);
-    uint8_t hang = 1;
+    oledShowStr(6, 0, (uint8_t *)shower->menuName, 1);
+    uint8_t hang = 2;
     if (shower->son != NULL)
     {
         getEnd = shower->son;
         do
         {
-            oledShowStr(0, hang, (uint8_t *)getEnd->menuName, 1);
+            oledShowStr(2, hang, (uint8_t *)getEnd->menuName, 1);
             hang++;
-            /*
-            显示printf一些内容
-            */
             getEnd = getEnd->next;
         } while (getEnd != NULL);
     }
 }
 
-void mainMenAction(menuItem *t)
+void mainMenuAction(menuItem *t)
 {
-    /*
-    oled显示内容
-    */
     uint8_t mainMenuKey = 0;
-    uint8_t mainMenuPoint = 0;
+    int mainMenuPoint = 0;
     uint8_t isChange = 0;
     while (1)
     {
@@ -104,12 +95,20 @@ void mainMenAction(menuItem *t)
             {
             case KEY0_PRES:
                 mainMenuPoint++;
+				if (mainMenuPoint >= t->sonNum){
+					mainMenuPoint = 0;
+				} 
                 showMenu(showMenuer);
                 HAL_Delay(100);
+                break;
             case KEY1_PRES:
                 mainMenuPoint--;
+				if (mainMenuPoint < 0){
+					mainMenuPoint = t->sonNum;
+				}
                 showMenu(showMenuer);
                 HAL_Delay(100);
+                break;
             case KEY_UP_PRES:
                 showMenu(showMenuer);
                 if (t->son != NULL)
@@ -125,6 +124,10 @@ void mainMenAction(menuItem *t)
                 showMenu(showMenuer);
                 isChange = 1;
                 break;
+			case KEY_EXIT:
+				showMenuer = t->back;
+				isChange = 1;
+				break;
             default:
                 break;
             }
