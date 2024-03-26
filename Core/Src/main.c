@@ -18,12 +18,12 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "dma.h"
 #include "rtc.h"
 #include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 #include "fsmc.h"
-
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 
@@ -79,7 +79,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  FormData_Init(&OpennMv_Data);
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -91,6 +91,7 @@ int main(void)
 
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
+  MX_DMA_Init();
   MX_FSMC_Init();
   MX_TIM1_Init();
   MX_TIM2_Init();
@@ -115,19 +116,19 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-menuItem *mainMenu = createMenu("MainMenu", NULL, 1, mainMenAction);
-menuItem *setpMot = createMenu("setpMot", mainMenu, 2, NULL);
-menuItem *setpMot_1 = createMenu("setpMot_1", setpMot, 2, NULL);
-menuItem *setpMot_2 = createMenu("setpMot_2", setpMot, 2, NULL);
+	menuItem *mainMenu = createMenu("MainMenu", NULL, 0, mainMenuAction);
+	menuItem *setpMot = createMenu("setpMot", mainMenu, 0, mainMenuAction);
+	menuItem *setpMot_1 = createMenu("setpMot_1", setpMot, 0, NULL);
+	menuItem *setpMot_2 = createMenu("setpMot_2", setpMot, 0, NULL);
 
 
-menuItem *usartMenu = createMenu("USARTMenu", mainMenu, 2, NULL);
-menuItem *usartMenu_1 = createMenu("USARTMenu_1", usartMenu, 0, NULL);
-menuItem *usartMenu_2 = createMenu("USARTMenu_2", usartMenu, 0, NULL);
+	menuItem *usartMenu = createMenu("USARTMenu", mainMenu, 0, mainMenuAction);
+	menuItem *usartMenu_1 = createMenu("USARTMenu_1", usartMenu, 0, NULL);
+	menuItem *usartMenu_2 = createMenu("USARTMenu_2", usartMenu, 0, NULL);
 
-menuItem *iicMenu = createMenu("IICMenu", mainMenu, 2, NULL);
-menuItem *iicMenu_1 = createMenu("IICMenu_1", iicMenu, 0, NULL);
-menuItem *iicMenu_2 = createMenu("IICMenu_2", iicMenu, 0, NULL);
+	menuItem *iicMenu = createMenu("IICMenu", mainMenu, 0, mainMenuAction);
+	menuItem *iicMenu_1 = createMenu("IICMenu_1", iicMenu, 0, NULL);
+	menuItem *iicMenu_2 = createMenu("IICMenu_2", iicMenu, 0, NULL);
 
 
 showMenuer = mainMenu;
@@ -155,14 +156,14 @@ showMenuer = mainMenu;
 //      }
 //    }
 //    else
-    {
+		{
       HAL_Delay(10);
       i++;
       if (i == 50)
       {
           //oledShowStr(0, 0, (char *)"mainwindows", 1);
-        showMenu(showMenuer);
-        showMenuer->action(showMenuer);
+		  showMenu(showMenuer);
+		  showMenuer->action(showMenuer);
 //        rtcGetTime();
 //        sprintf((char *)tbuf, "Time:%02d:%02d:%02d", time.hour, time.min, time.sec);
 //        oledShowStr(0, 0, tbuf, 1);
@@ -173,8 +174,7 @@ showMenuer = mainMenu;
         LED_TOGGLE();
         i = 0;
       }
-    }
-  }
+  }}
   /* USER CODE END 3 */
 }
 
