@@ -18,6 +18,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "can.h"
 #include "dma.h"
 #include "rtc.h"
 #include "tim.h"
@@ -50,6 +51,7 @@
 uint8_t key = 0;
 uint8_t i = 0;
 uint8_t tbuf[40];
+unsigned char *str;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -102,6 +104,8 @@ int main(void)
   MX_USART2_UART_Init();
   MX_USART3_UART_Init();
   MX_RTC_Init();
+  MX_CAN_Init();
+  MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
   oledInit();
   oledDrawBMP(0, 0, 128, 8, (unsigned char *)BMP);
@@ -138,43 +142,83 @@ showMenuer = mainMenu;
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-    /*
-    菜单页面创建
-    */
-//    key = keyScan(0);
-//    if (key)
-//    {
-//      switch (key)
-//      {
-//          case KEY_UP_PRES:
-//              break;
-//          case KEY0_PRES:
-//              break;
-//          case KEY1_PRES:
-//              testProcess();
-//               break;
-//      }
-//    }
-//    else
-		{
-      HAL_Delay(10);
-      i++;
-      if (i == 50)
-      {
-          //oledShowStr(0, 0, (char *)"mainwindows", 1);
-		  showMenu(showMenuer);
-		  showMenuer->action(showMenuer);
-//        rtcGetTime();
-//        sprintf((char *)tbuf, "Time:%02d:%02d:%02d", time.hour, time.min, time.sec);
-//        oledShowStr(0, 0, tbuf, 1);
-//        sprintf((char *)tbuf, "Date:%04d-%02d-%02d", time.year, time.month, time.date);
-//        oledShowStr(0, 1, tbuf, 1);
-//        sprintf((char *)tbuf, "Week:%s", weekdays[time.week]);
-//        oledShowStr(0, 2, tbuf, 1);
-        LED_TOGGLE();
-        i = 0;
-      }
-  }}
+        key = remoteScan();
+
+        if (key)
+        {
+            switch (key)
+            {
+            case 69:
+                str = "1    ";
+                break;
+            case 70:
+                str = "2    ";
+                break;
+            case 71:
+                str = "3    ";
+                break;
+            case 68:
+                str = "4    ";
+                break;
+            case 64:
+                str = "5    ";
+                break;
+            case 67:
+                str = "6    ";
+                break;
+            case 7:
+                str = "7    ";
+                break;
+            case 21:
+                str = "8    ";
+                break;
+            case 9:
+                str = "9    ";
+                break;
+            case 25:
+                str = "0    ";
+                break;
+            case 13:
+                str = "#    ";
+                break;
+            case 22:
+                str = "*    ";
+                break;
+            case 24:
+                str = "UP   ";
+                break;
+            case 82:
+                str = "DOWM ";
+                break;
+            case 8:
+                str = "LEFT ";
+                break;
+            case 90:
+                str = "RIGHT";
+                break;
+            case 28:
+                str = "OK   ";
+                break;
+            default:
+                str = "NULL ";
+                break;
+            
+            }
+            oledShowStr(0, 7, str, 1);
+        }
+        else
+        {
+            HAL_Delay(10);
+        }
+
+        i++;
+
+        if (i == 50)
+        {
+            i = 0;
+            LED_TOGGLE(); /* LED0闪烁 */
+        }
+  }
   /* USER CODE END 3 */
 }
 

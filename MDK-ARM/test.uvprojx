@@ -411,9 +411,15 @@
               <FilePath>../Core/Src/gpio.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
               <FileName>dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Core/Src/dma.c</FilePath>
+=======
+              <FileName>can.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Core/Src/can.c</FilePath>
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
               <FileOption>
                 <CommonProperty>
                   <UseCPPCompiler>2</UseCPPCompiler>
@@ -427,8 +433,11 @@
                   <AssembleAssemblyFile>2</AssembleAssemblyFile>
                   <PublicsOnly>2</PublicsOnly>
                   <StopOnExitCode>11</StopOnExitCode>
+<<<<<<< HEAD
                   <CustomArgument></CustomArgument>
                   <IncludeLibraryModules></IncludeLibraryModules>
+=======
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
                   <ComprImg>1</ComprImg>
                 </CommonProperty>
                 <FileArmAds>
@@ -455,12 +464,15 @@
                     <v6Lto>2</v6Lto>
                     <v6WtE>2</v6WtE>
                     <v6Rtti>2</v6Rtti>
+<<<<<<< HEAD
                     <VariousControls>
                       <MiscControls></MiscControls>
                       <Define></Define>
                       <Undefine></Undefine>
                       <IncludePath></IncludePath>
                     </VariousControls>
+=======
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
                   </Cads>
                 </FileArmAds>
               </FileOption>
@@ -656,9 +668,51 @@
               <FilePath>../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_gpio_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32f1xx_ll_fsmc.c</FileName>
+              <FileName>stm32f1xx_hal_can.c</FileName>
               <FileType>1</FileType>
-              <FilePath>../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.c</FilePath>
+              <FilePath>../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_can.c</FilePath>
+              <FileOption>
+                <CommonProperty>
+                  <UseCPPCompiler>2</UseCPPCompiler>
+                  <RVCTCodeConst>0</RVCTCodeConst>
+                  <RVCTZI>0</RVCTZI>
+                  <RVCTOtherData>0</RVCTOtherData>
+                  <ModuleSelection>0</ModuleSelection>
+                  <IncludeInBuild>1</IncludeInBuild>
+                  <AlwaysBuild>2</AlwaysBuild>
+                  <GenerateAssemblyFile>2</GenerateAssemblyFile>
+                  <AssembleAssemblyFile>2</AssembleAssemblyFile>
+                  <PublicsOnly>2</PublicsOnly>
+                  <StopOnExitCode>11</StopOnExitCode>
+                  <ComprImg>1</ComprImg>
+                </CommonProperty>
+                <FileArmAds>
+                  <Cads>
+                    <interw>2</interw>
+                    <Optim>0</Optim>
+                    <oTime>2</oTime>
+                    <SplitLS>2</SplitLS>
+                    <OneElfS>2</OneElfS>
+                    <Strict>2</Strict>
+                    <EnumInt>2</EnumInt>
+                    <PlainCh>2</PlainCh>
+                    <Ropi>2</Ropi>
+                    <Rwpi>2</Rwpi>
+                    <wLevel>0</wLevel>
+                    <uThumb>2</uThumb>
+                    <uSurpInc>2</uSurpInc>
+                    <uC99>2</uC99>
+                    <useXO>2</useXO>
+                    <v6Lang>0</v6Lang>
+                    <v6LangP>0</v6LangP>
+                    <vShortEn>2</vShortEn>
+                    <vShortWch>2</vShortWch>
+                    <v6Lto>2</v6Lto>
+                    <v6WtE>2</v6WtE>
+                    <v6Rtti>2</v6Rtti>
+                  </Cads>
+                </FileArmAds>
+              </FileOption>
             </File>
             <File>
               <FileName>stm32f1xx_hal.c</FileName>
@@ -709,6 +763,11 @@
               <FileName>stm32f1xx_hal_exti.c</FileName>
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_hal_exti.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f1xx_ll_fsmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32F1xx_HAL_Driver/Src/stm32f1xx_ll_fsmc.c</FilePath>
             </File>
             <File>
               <FileName>stm32f1xx_hal_sram.c</FileName>
@@ -936,11 +995,6 @@
               <FilePath>..\User\BSP\OLED\OLEDLAB.c</FilePath>
             </File>
             <File>
-              <FileName>UsartManage.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\User\Manager\UsartManage\UsartManage.c</FilePath>
-            </File>
-            <File>
               <FileName>Delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Tools\Delay\Delay.c</FilePath>
@@ -966,6 +1020,7 @@
               <FilePath>..\User\Control\SteppingMotorControl\SteppingMotorControl.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
               <FileName>Menu.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\APP\Menu\Menu.c</FilePath>
@@ -974,6 +1029,11 @@
               <FileName>MyUsart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Usart\MyUsart.c</FilePath>
+=======
+              <FileName>MsgManage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Manager\MsgManage\MsgManage.c</FilePath>
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
             </File>
           </Files>
         </Group>

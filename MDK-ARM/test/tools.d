@@ -8,20 +8,32 @@ test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 test\tools.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 test\tools.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 test\tools.o: ../Drivers/CMSIS/Include/core_cm3.h
+<<<<<<< HEAD
 test\tools.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+=======
+test\tools.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdint.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\tools.o: ../Drivers/CMSIS/Include/cmsis_version.h
 test\tools.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 test\tools.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 test\tools.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+<<<<<<< HEAD
 test\tools.o: E:\keil\ARM\ARMCC\Bin\..\include\stddef.h
+=======
+test\tools.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stddef.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
+<<<<<<< HEAD
+=======
+test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
@@ -33,10 +45,17 @@ test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\tools.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+<<<<<<< HEAD
 test\tools.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
 test\tools.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 test\tools.o: E:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 test\tools.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
+=======
+test\tools.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
+test\tools.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\tools.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+test\tools.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\tools.o: ../Core/Inc/malloc.h
 test\tools.o: ../Core/Inc/main.h
 test\tools.o: ../Core/Inc/../../User/BSP/OLED/OLED.h
@@ -48,11 +67,21 @@ test\tools.o: ../Core/Inc/../../User/BSP/Beep/Beep.h
 test\tools.o: ../Core/Inc/../../User/BSP/Led/Led.h
 test\tools.o: ../Core/Inc/../../User/BSP/Key/Key.h
 test\tools.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
+<<<<<<< HEAD
+=======
+test\tools.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\tools.o: ../Core/Inc/../../User/APP/Menu/Menu.h
 test\tools.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\tools.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\tools.o: ../Core/Inc/usart.h
+<<<<<<< HEAD
 test\tools.o: ../Core/Inc/../../User/Usart/MyUsart.h
 test\tools.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\tools.o: ../Core/Inc/tim.h
 test\tools.o: ../Core/Inc/../../User/Manager/UsartManage/UsartManage.h
+=======
+test\tools.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
+test\tools.o: ../Core/Inc/tim.h
+test\tools.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99

@@ -28,7 +28,8 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include "rtc.h"
-#include "../../User/Manager/UsartManage/UsartManage.h"
+#include "can.h"
+#include "../../User/Manager/MsgManage/MsgManage.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/
@@ -57,6 +58,7 @@ void DebugMon_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
 void RTC_IRQHandler(void);
+void USB_LP_CAN1_RX0_IRQHandler(void);
 void DMA1_Channel3_IRQHandler(void);
 void TIM1_CC_IRQHandler(void);
 void TIM2_IRQHandler(void);
@@ -66,6 +68,7 @@ void USART1_IRQHandler(void);
 void USART2_IRQHandler(void);
 void USART3_IRQHandler(void);
 void TIM8_CC_IRQHandler(void);
+void TIM5_IRQHandler(void);
 /* USER CODE BEGIN EFP */
 
 /* USER CODE END EFP */

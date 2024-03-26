@@ -18,12 +18,12 @@
                 "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\BSP\\Key",
                 "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\BSP\\Led",
                 "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\BSP\\OLED",
-                "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\Manager\\UsartManage",
                 "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\Tools\\Delay",
                 "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\Tools\\Tools",
                 "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\Control\\Process",
                 "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\Control\\ServoControl",
-                "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\Control\\SteppingMotorControl"
+                "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\Control\\SteppingMotorControl",
+                "c:\\Users\\Miao_kaw\\Desktop\\test\\User\\Manager\\MsgManage"
             ],
             "defines": [
                 "USE_HAL_DRIVER",

@@ -1,10 +1,10 @@
-#ifndef __USARTMANAGE_H__
-#define __USARTMANAGE_H__
+#ifndef __MsgMANAGE_H__
+#define __MsgMANAGE_H__
 
-#include "main.h" 
+#include "main.h"
 
-#define USART1_RXBUFFER_LEN               200         /* 定义最大接收字节数 200 */
-#define USART1_HAL_RXBUFFER_LEN           1           /* 缓存大小 */
+#define USART1_RXBUFFER_LEN 200   /* 定义最大接收字节数 200 */
+#define USART1_HAL_RXBUFFER_LEN 1 /* 缓存大小 */
 
 #define SERVO_RXBUFFER_LEN 10
 

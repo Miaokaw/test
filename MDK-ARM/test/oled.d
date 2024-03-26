@@ -10,20 +10,32 @@ test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 test\oled.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 test\oled.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 test\oled.o: ../Drivers/CMSIS/Include/core_cm3.h
+<<<<<<< HEAD
 test\oled.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
+=======
+test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdint.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\oled.o: ../Drivers/CMSIS/Include/cmsis_version.h
 test\oled.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 test\oled.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 test\oled.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
+<<<<<<< HEAD
 test\oled.o: E:\keil\ARM\ARMCC\Bin\..\include\stddef.h
+=======
+test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stddef.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_exti.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_dma_ex.h
+<<<<<<< HEAD
+=======
+test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_can.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_cortex.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
@@ -35,10 +47,17 @@ test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+<<<<<<< HEAD
 test\oled.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
 test\oled.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 test\oled.o: E:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 test\oled.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
+=======
+test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
+test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\oled.o: ../Core/Inc/malloc.h
 test\oled.o: ../Core/Inc/main.h
 test\oled.o: ../Core/Inc/../../User/BSP/OLED/OLED.h
@@ -47,14 +66,24 @@ test\oled.o: ../Core/Inc/../../User/BSP/Led/Led.h
 test\oled.o: ../Core/Inc/../../User/BSP/Key/Key.h
 test\oled.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
 test\oled.o: ../Core/Inc/i2c.h
+<<<<<<< HEAD
+=======
+test\oled.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\oled.o: ../Core/Inc/../../User/APP/Menu/Menu.h
 test\oled.o: ../Core/Inc/../../User/Tools/Delay/Delay.h
 test\oled.o: ../Core/Inc/../../User/Tools/Tools/TOOLS.h
 test\oled.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\oled.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\oled.o: ../Core/Inc/usart.h
+<<<<<<< HEAD
 test\oled.o: ../Core/Inc/../../User/Usart/MyUsart.h
 test\oled.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\oled.o: ../Core/Inc/tim.h
 test\oled.o: ../Core/Inc/../../User/Manager/UsartManage/UsartManage.h
+=======
+test\oled.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
+test\oled.o: ../Core/Inc/tim.h
+test\oled.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
+>>>>>>> ba536b6d4a2ab768d13af71e384ce5302b147d99
 test\oled.o: ..\User\BSP\OLED\OLEDLAB.h
