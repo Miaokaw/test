@@ -33,6 +33,7 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 #include "string.h"
 #include "stdlib.h"
+#include "stdbool.h"
 #include "stdio.h"
 #include "math.h"
 #include "malloc.h"
@@ -45,8 +46,10 @@ extern "C" {
 #include "../../User/APP/Menu/Menu.h"
 #include "../../User/Tools/Delay/Delay.h"
 #include "../../User/Tools/Tools/TOOLS.h"
+#include "../../User/Tools/USMART/usmart.h"
 #include "../../User/Control/Process/Process.h"
 #include "../../User/Control/ServoControl/ServoControl.h"
+#include "../../User/Control/ZDTmotorControl/ZDTmotorControl.h"
 #include "../../User/Control/SteppingMotorControl/SteppingMotorControl.h"
 #include "../../User/Manager/MsgManage/MsgManage.h"
 /* USER CODE END Includes */

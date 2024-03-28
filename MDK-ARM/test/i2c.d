@@ -37,6 +37,7 @@ test\i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\i2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 test\i2c.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
 test\i2c.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\i2c.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdbool.h
 test\i2c.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 test\i2c.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
 test\i2c.o: ../Core/Inc/malloc.h
@@ -52,9 +53,12 @@ test\i2c.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
 test\i2c.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
 test\i2c.o: ../Core/Inc/../../User/APP/Menu/Menu.h
 test\i2c.o: ../Core/Inc/../../User/Tools/Delay/Delay.h
+test\i2c.o: ../Core/Inc/../../User/Tools/USMART/usmart.h
+test\i2c.o: ../Core/Inc/../../User/Tools/USMART/usmart_port.h
+test\i2c.o: ../Core/Inc/../../User/Tools/USMART/../../Manager/MsgManage/MsgManage.h
 test\i2c.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\i2c.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\i2c.o: ../Core/Inc/usart.h
+test\i2c.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\i2c.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\i2c.o: ../Core/Inc/tim.h
-test\i2c.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h

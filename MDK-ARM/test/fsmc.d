@@ -36,6 +36,7 @@ test\fsmc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\fsmc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 test\fsmc.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
 test\fsmc.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\fsmc.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdbool.h
 test\fsmc.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 test\fsmc.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
 test\fsmc.o: ../Core/Inc/malloc.h
@@ -51,9 +52,12 @@ test\fsmc.o: ../Core/Inc/../../User/BSP/Key/Key.h
 test\fsmc.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
 test\fsmc.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
 test\fsmc.o: ../Core/Inc/../../User/APP/Menu/Menu.h
+test\fsmc.o: ../Core/Inc/../../User/Tools/USMART/usmart.h
+test\fsmc.o: ../Core/Inc/../../User/Tools/USMART/usmart_port.h
+test\fsmc.o: ../Core/Inc/../../User/Tools/USMART/../../Manager/MsgManage/MsgManage.h
 test\fsmc.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\fsmc.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\fsmc.o: ../Core/Inc/usart.h
+test\fsmc.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\fsmc.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\fsmc.o: ../Core/Inc/tim.h
-test\fsmc.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h

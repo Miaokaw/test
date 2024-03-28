@@ -27,9 +27,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "rtc.h"
-#include "can.h"
-#include "../../User/Manager/MsgManage/MsgManage.h"
+
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

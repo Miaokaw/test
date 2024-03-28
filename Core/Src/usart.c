@@ -82,7 +82,7 @@ void MX_USART2_UART_Init(void)
     Error_Handler();
   }
   /* USER CODE BEGIN USART2_Init 2 */
-
+    HAL_UART_Receive_IT(&huart1, (uint8_t *)usart1Data.halBuffer, USART1_HAL_RXBUFFER_LEN);
   /* USER CODE END USART2_Init 2 */
 
 }
@@ -112,7 +112,7 @@ void MX_USART3_UART_Init(void)
   }
   /* USER CODE BEGIN USART3_Init 2 */
     __HAL_UART_ENABLE_IT(&huart3,UART_IT_IDLE);  
-    HAL_UART_Receive_DMA(&huart3,OpennMv_Data.RxBuffer,FORMDATA_RXBUFFER_LEN); 
+    HAL_UART_Receive_DMA(&huart3,OpennMvData.RxBuffer,FORMDATA_RXBUFFER_LEN); 
   /* USER CODE END USART3_Init 2 */
 
 }
@@ -147,7 +147,7 @@ void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
     __HAL_AFIO_REMAP_USART1_ENABLE();
 
     /* USART1 interrupt Init */
-    HAL_NVIC_SetPriority(USART1_IRQn, 2, 0);
+    HAL_NVIC_SetPriority(USART1_IRQn, 3, 0);
     HAL_NVIC_EnableIRQ(USART1_IRQn);
   /* USER CODE BEGIN USART1_MspInit 1 */
 

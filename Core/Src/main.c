@@ -82,7 +82,7 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  FormData_Init(&OpennMv_Data);
+
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -113,10 +113,26 @@ int main(void)
   servoInit();
   mallocInit();
   motorInit();
+  usmart_dev.init(72);
+  FormDataInit(&OpennMvData);
   beepBeep(eepromTest());
   HAL_Delay(1000);
   oledCLS();
   rtcSetTime(2024, 3, 24, 9, 8, 40);
+  
+//  uint8_t rxCmd[128] = {0}; uint8_t rxCount = 0;
+// 
+//  // 速度模式：�?�度斜率1000RPM/s，�?�度3000RPM
+//  velocityControl(1, 0, 1000, 3000.0f, 0);
+
+//  // 等待返回命令，命令数据缓存在数组rxCmd上，长度为rxCount
+//  receiveData(rxCmd, &rxCount);
+
+//  // 验证校验字节，验证成功则点亮LED灯，否则熄灭LED�?
+//  if(rxCmd[rxCount - 1] == 0x6B) {beepBeep(2);}else{ beepBeep(1);}
+
+  // 停止发�?�命�?
+//  while(1);
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -216,6 +232,7 @@ showMenuer = mainMenu;
         }
         else
         {
+            usmart_scan();
             HAL_Delay(10);
         }
 

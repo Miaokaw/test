@@ -45,8 +45,9 @@ void MX_CAN_Init(void);
 
   extern CAN_TxHeaderTypeDef txMsg;
   extern CAN_RxHeaderTypeDef rxMsg;
-  extern uint8_t canRxFlag;
-  uint8_t canSendMsg(uint32_t id, uint8_t *msg, uint8_t len);
+  extern uint8_t canRxBuf[8];
+  extern bool canRxFlag;
+  uint8_t canSendCmd(uint8_t *cmd, uint8_t len);
   uint8_t canReceiveMsg(uint32_t id, uint8_t *buf);
 
 /* USER CODE END Prototypes */

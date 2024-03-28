@@ -11,6 +11,8 @@
         "usmart_port.h": "c",
         "usartmanage.h": "c",
         "menu.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "remote.h": "c",
+        "stdlib.h": "c"
     }
 }

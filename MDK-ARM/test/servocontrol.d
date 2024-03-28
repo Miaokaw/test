@@ -36,6 +36,7 @@ test\servocontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\servocontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 test\servocontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
 test\servocontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\servocontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdbool.h
 test\servocontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 test\servocontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
 test\servocontrol.o: ../Core/Inc/malloc.h
@@ -51,9 +52,12 @@ test\servocontrol.o: ../Core/Inc/../../User/BSP/Key/Key.h
 test\servocontrol.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
 test\servocontrol.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
 test\servocontrol.o: ../Core/Inc/../../User/APP/Menu/Menu.h
+test\servocontrol.o: ../Core/Inc/../../User/Tools/USMART/usmart.h
+test\servocontrol.o: ../Core/Inc/../../User/Tools/USMART/usmart_port.h
+test\servocontrol.o: ../Core/Inc/../../User/Tools/USMART/../../Manager/MsgManage/MsgManage.h
 test\servocontrol.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\servocontrol.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
+test\servocontrol.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\servocontrol.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\servocontrol.o: ../Core/Inc/tim.h
-test\servocontrol.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
 test\servocontrol.o: ../Core/Inc/usart.h

@@ -1,7 +1,5 @@
 test\eeprom.o: ..\User\BSP\EEPROM\EEPROM.c
 test\eeprom.o: ..\User\BSP\EEPROM\EEPROM.h
-test\eeprom.o: ../Core/Inc/i2c.h
-test\eeprom.o: ../Core/Inc/../../User/Tools/Delay/Delay.h
 test\eeprom.o: ../Core/Inc/main.h
 test\eeprom.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 test\eeprom.o: ../Core/Inc/stm32f1xx_hal_conf.h
@@ -38,12 +36,14 @@ test\eeprom.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\eeprom.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 test\eeprom.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
 test\eeprom.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\eeprom.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdbool.h
 test\eeprom.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 test\eeprom.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
 test\eeprom.o: ../Core/Inc/malloc.h
 test\eeprom.o: ../Core/Inc/main.h
 test\eeprom.o: ../Core/Inc/../../User/BSP/OLED/OLED.h
 test\eeprom.o: ../Core/Inc/i2c.h
+test\eeprom.o: ../Core/Inc/../../User/Tools/Delay/Delay.h
 test\eeprom.o: ../Core/Inc/../../User/BSP/OLED/../../Tools/Tools/Tools.h
 test\eeprom.o: ../Core/Inc/../../User/BSP/OLED/OLEDLAB.h
 test\eeprom.o: ../Core/Inc/../../User/BSP/Beep/Beep.h
@@ -52,10 +52,12 @@ test\eeprom.o: ../Core/Inc/../../User/BSP/Key/Key.h
 test\eeprom.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
 test\eeprom.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
 test\eeprom.o: ../Core/Inc/../../User/APP/Menu/Menu.h
-test\eeprom.o: ../Core/Inc/../../User/Tools/Delay/Delay.h
+test\eeprom.o: ../Core/Inc/../../User/Tools/USMART/usmart.h
+test\eeprom.o: ../Core/Inc/../../User/Tools/USMART/usmart_port.h
+test\eeprom.o: ../Core/Inc/../../User/Tools/USMART/../../Manager/MsgManage/MsgManage.h
 test\eeprom.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\eeprom.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\eeprom.o: ../Core/Inc/usart.h
+test\eeprom.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\eeprom.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\eeprom.o: ../Core/Inc/tim.h
-test\eeprom.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h

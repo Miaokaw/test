@@ -46,6 +46,11 @@
 "test\oledlab.o"
 "test\remote.o"
 "test\menu.o"
+"test\zdtmotorcontrol.o"
+"test\usmart.o"
+"test\usmart_config.o"
+"test\usmart_port.o"
+"test\usmart_str.o"
 --strict --scatter "test\test.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

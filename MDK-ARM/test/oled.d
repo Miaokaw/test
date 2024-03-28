@@ -38,6 +38,7 @@ test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\oled.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
 test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdbool.h
 test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 test\oled.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
 test\oled.o: ../Core/Inc/malloc.h
@@ -47,15 +48,17 @@ test\oled.o: ../Core/Inc/../../User/BSP/Beep/Beep.h
 test\oled.o: ../Core/Inc/../../User/BSP/Led/Led.h
 test\oled.o: ../Core/Inc/../../User/BSP/Key/Key.h
 test\oled.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
-test\oled.o: ../Core/Inc/i2c.h
 test\oled.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
 test\oled.o: ../Core/Inc/../../User/APP/Menu/Menu.h
 test\oled.o: ../Core/Inc/../../User/Tools/Delay/Delay.h
 test\oled.o: ../Core/Inc/../../User/Tools/Tools/TOOLS.h
+test\oled.o: ../Core/Inc/../../User/Tools/USMART/usmart.h
+test\oled.o: ../Core/Inc/../../User/Tools/USMART/usmart_port.h
+test\oled.o: ../Core/Inc/../../User/Tools/USMART/../../Manager/MsgManage/MsgManage.h
 test\oled.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\oled.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\oled.o: ../Core/Inc/usart.h
+test\oled.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\oled.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\oled.o: ../Core/Inc/tim.h
-test\oled.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
 test\oled.o: ..\User\BSP\OLED\OLEDLAB.h

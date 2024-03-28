@@ -35,6 +35,7 @@ test\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\stm32f1xx_it.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 test\stm32f1xx_it.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
 test\stm32f1xx_it.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\stm32f1xx_it.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdbool.h
 test\stm32f1xx_it.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
 test\stm32f1xx_it.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
 test\stm32f1xx_it.o: ../Core/Inc/malloc.h
@@ -50,12 +51,15 @@ test\stm32f1xx_it.o: ../Core/Inc/../../User/BSP/Key/Key.h
 test\stm32f1xx_it.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
 test\stm32f1xx_it.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
 test\stm32f1xx_it.o: ../Core/Inc/../../User/APP/Menu/Menu.h
+test\stm32f1xx_it.o: ../Core/Inc/../../User/Tools/USMART/usmart.h
+test\stm32f1xx_it.o: ../Core/Inc/../../User/Tools/USMART/usmart_port.h
+test\stm32f1xx_it.o: ../Core/Inc/../../User/Tools/USMART/../../Manager/MsgManage/MsgManage.h
 test\stm32f1xx_it.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\stm32f1xx_it.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\stm32f1xx_it.o: ../Core/Inc/usart.h
+test\stm32f1xx_it.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\stm32f1xx_it.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\stm32f1xx_it.o: ../Core/Inc/tim.h
-test\stm32f1xx_it.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
 test\stm32f1xx_it.o: ../Core/Inc/stm32f1xx_it.h
 test\stm32f1xx_it.o: ../Core/Inc/rtc.h
 test\stm32f1xx_it.o: ../Core/Inc/can.h

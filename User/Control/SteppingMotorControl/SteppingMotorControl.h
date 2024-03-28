@@ -102,6 +102,8 @@ extern MotorControl motor5;
 extern uint8_t errorBeep;
 
 void motorInit(void);
+void move(uint8_t motor, int32_t v1, float accTime, float decTime, int32_t step);
+void move2Pos(uint8_t motor, int32_t v1, float accTime, float decTime, int32_t pos);
 void motorSpeedControlStar(MotorControl *motor, uint16_t pluse);
 void motorSpeedControlStop(MotorControl *motor);
 void motorMove2Pos(MotorControl *motor, int32_t v1, float accTime, float decTime, int32_t pos);
