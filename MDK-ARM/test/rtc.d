@@ -34,10 +34,18 @@ test\rtc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h
 test\rtc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 test\rtc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\rtc.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+<<<<<<< HEAD
 test\rtc.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
 test\rtc.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 test\rtc.o: E:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 test\rtc.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
+=======
+test\rtc.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
+test\rtc.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\rtc.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdbool.h
+test\rtc.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+test\rtc.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
 test\rtc.o: ../Core/Inc/malloc.h
 test\rtc.o: ../Core/Inc/main.h
 test\rtc.o: ../Core/Inc/../../User/BSP/OLED/OLED.h
@@ -51,10 +59,18 @@ test\rtc.o: ../Core/Inc/../../User/BSP/Key/Key.h
 test\rtc.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
 test\rtc.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
 test\rtc.o: ../Core/Inc/../../User/APP/Menu/Menu.h
+test\rtc.o: ../Core/Inc/../../User/Tools/USMART/usmart.h
+test\rtc.o: ../Core/Inc/../../User/Tools/USMART/usmart_port.h
+test\rtc.o: ../Core/Inc/../../User/Tools/USMART/../../Manager/MsgManage/MsgManage.h
 test\rtc.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\rtc.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\rtc.o: ../Core/Inc/usart.h
+test\rtc.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\rtc.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\rtc.o: ../Core/Inc/tim.h
+<<<<<<< HEAD
 test\rtc.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
 test\rtc.o: ../Core/Inc/../../User/Arm/ArmMoving.h
+=======
+test\rtc.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904

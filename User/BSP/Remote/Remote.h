@@ -28,6 +28,10 @@ typedef enum
     NOTHING = 0,
 }KEYtype;
 
+extern uint8_t remoteFlag;
+extern uint32_t remoteData; /* ������յ������� */
+extern uint8_t remoteCnt;  /* �������µĴ��� */
+
 extern uint8_t lastSta;
 
 uint8_t remoteScan(void);

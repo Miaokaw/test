@@ -33,10 +33,18 @@ test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h
 test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+<<<<<<< HEAD
 test\main.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
 test\main.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 test\main.o: E:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 test\main.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
+=======
+test\main.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
+test\main.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\main.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdbool.h
+test\main.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+test\main.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
 test\main.o: ../Core/Inc/malloc.h
 test\main.o: ../Core/Inc/main.h
 test\main.o: ../Core/Inc/../../User/BSP/OLED/OLED.h
@@ -50,13 +58,21 @@ test\main.o: ../Core/Inc/../../User/BSP/Key/Key.h
 test\main.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
 test\main.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
 test\main.o: ../Core/Inc/../../User/APP/Menu/Menu.h
+test\main.o: ../Core/Inc/../../User/Tools/USMART/usmart.h
+test\main.o: ../Core/Inc/../../User/Tools/USMART/usmart_port.h
+test\main.o: ../Core/Inc/../../User/Tools/USMART/../../Manager/MsgManage/MsgManage.h
 test\main.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\main.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\main.o: ../Core/Inc/usart.h
+test\main.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\main.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\main.o: ../Core/Inc/tim.h
+<<<<<<< HEAD
 test\main.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
 test\main.o: ../Core/Inc/../../User/Arm/ArmMoving.h
+=======
+test\main.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
 test\main.o: ../Core/Inc/can.h
 test\main.o: ../Core/Inc/dma.h
 test\main.o: ../Core/Inc/rtc.h

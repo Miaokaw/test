@@ -34,10 +34,18 @@ test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_r
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
+<<<<<<< HEAD
 test\steppingmotorcontrol.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
 test\steppingmotorcontrol.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
 test\steppingmotorcontrol.o: E:\keil\ARM\ARMCC\Bin\..\include\stdio.h
 test\steppingmotorcontrol.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
+=======
+test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
+test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
+test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdbool.h
+test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
+test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
 test\steppingmotorcontrol.o: ../Core/Inc/malloc.h
 test\steppingmotorcontrol.o: ../Core/Inc/main.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/BSP/OLED/OLED.h
@@ -51,10 +59,18 @@ test\steppingmotorcontrol.o: ../Core/Inc/../../User/BSP/Key/Key.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/BSP/EEPROM/EEPROM.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/BSP/Remote/Remote.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/APP/Menu/Menu.h
+test\steppingmotorcontrol.o: ../Core/Inc/../../User/Tools/USMART/usmart.h
+test\steppingmotorcontrol.o: ../Core/Inc/../../User/Tools/USMART/usmart_port.h
+test\steppingmotorcontrol.o: ../Core/Inc/../../User/Tools/USMART/../../Manager/MsgManage/MsgManage.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/Control/Process/Process.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\steppingmotorcontrol.o: ../Core/Inc/usart.h
+test\steppingmotorcontrol.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
+<<<<<<< HEAD
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/Arm/ArmMoving.h
+=======
+test\steppingmotorcontrol.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
 test\steppingmotorcontrol.o: ../Core/Inc/tim.h

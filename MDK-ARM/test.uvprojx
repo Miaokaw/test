@@ -10,13 +10,12 @@
       <TargetName>test</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>5060528::V5.06 update 5 (build 528)::ARMCC</pCCUsed>
-      <uAC6>0</uAC6>
+      <pCCUsed>5060422::V5.06 update 4 (build 422)::ARMCC</pCCUsed>
       <TargetOption>
         <TargetCommonOption>
           <Device>STM32F103ZE</Device>
           <Vendor>STMicroelectronics</Vendor>
-          <PackID>Keil.STM32F1xx_DFP.2.2.0</PackID>
+          <PackID>Keil.STM32F1xx_DFP.2.3.0</PackID>
           <PackURL>http://www.keil.com/pack/</PackURL>
           <Cpu>IRAM(0x20000000-0x2000FFFF) IROM(0x8000000-0x807FFFF)  CLOCK(8000000) CPUTYPE("Cortex-M3") TZ</Cpu>
           <FlashUtilSpec></FlashUtilSpec>
@@ -2102,9 +2101,40 @@
           <GroupName>User</GroupName>
           <Files>
             <File>
+<<<<<<< HEAD
               <FileName>Menu.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\APP\Menu\Menu.c</FilePath>
+=======
+              <FileName>Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Tools\Delay\Delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>Tools.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Tools\Tools\Tools.c</FilePath>
+            </File>
+            <File>
+              <FileName>MsgManage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Manager\MsgManage\MsgManage.c</FilePath>
+            </File>
+            <File>
+              <FileName>Process.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Control\Process\Process.c</FilePath>
+            </File>
+            <File>
+              <FileName>ServoControl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Control\ServoControl\ServoControl.c</FilePath>
+            </File>
+            <File>
+              <FileName>SteppingMotorControl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Control\SteppingMotorControl\SteppingMotorControl.c</FilePath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
             </File>
             <File>
               <FileName>Beep.c</FileName>
@@ -2142,6 +2172,7 @@
               <FilePath>..\User\BSP\Remote\Remote.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
               <FileName>Process.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Control\Process\Process.c</FilePath>
@@ -2175,6 +2206,46 @@
               <FileName>ArmMoving.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Arm\ArmMoving.c</FilePath>
+=======
+              <FileName>Menu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\APP\Menu\Menu.c</FilePath>
+            </File>
+            <File>
+              <FileName>ZDTmotorControl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Control\ZDTmotorControl\ZDTmotorControl.c</FilePath>
+            </File>
+            <File>
+              <FileName>TimManage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Manager\TimManage\TimManage.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>USMART</GroupName>
+          <Files>
+            <File>
+              <FileName>usmart.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Tools\USMART\usmart.c</FilePath>
+            </File>
+            <File>
+              <FileName>usmart_config.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Tools\USMART\usmart_config.c</FilePath>
+            </File>
+            <File>
+              <FileName>usmart_port.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Tools\USMART\usmart_port.c</FilePath>
+            </File>
+            <File>
+              <FileName>usmart_str.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Tools\USMART\usmart_str.c</FilePath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
             </File>
           </Files>
         </Group>

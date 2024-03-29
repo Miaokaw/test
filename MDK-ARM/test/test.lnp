@@ -40,6 +40,7 @@
 "test\oled.o"
 "test\oledlab.o"
 "test\remote.o"
+<<<<<<< HEAD
 "test\process.o"
 "test\servocontrol.o"
 "test\steppingmotorcontrol.o"
@@ -47,6 +48,15 @@
 "test\delay.o"
 "test\tools.o"
 "test\armmoving.o"
+=======
+"test\menu.o"
+"test\zdtmotorcontrol.o"
+"test\timmanage.o"
+"test\usmart.o"
+"test\usmart_config.o"
+"test\usmart_port.o"
+"test\usmart_str.o"
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
 --strict --scatter "test\test.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

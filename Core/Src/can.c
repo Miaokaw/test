@@ -23,7 +23,8 @@
 /* USER CODE BEGIN 0 */
 CAN_TxHeaderTypeDef txMsg;
 CAN_RxHeaderTypeDef rxMsg;
-uint8_t canRxFlag;
+bool canRxFlag;
+uint8_t canRxBuf[8];
 /* USER CODE END 0 */
 
 CAN_HandleTypeDef hcan;
@@ -141,31 +142,56 @@ void HAL_CAN_MspDeInit(CAN_HandleTypeDef* canHandle)
     /* CAN1 interrupt Deinit */
     HAL_NVIC_DisableIRQ(USB_LP_CAN1_RX0_IRQn);
   /* USER CODE BEGIN CAN1_MspDeInit 1 */
-
+    __HAL_CAN_ENABLE_IT(&hcan, CAN_IT_RX_FIFO0_MSG_PENDING);
   /* USER CODE END CAN1_MspDeInit 1 */
   }
 }
 
 /* USER CODE BEGIN 1 */
-uint8_t canSendMsg(uint32_t id, uint8_t *msg, uint8_t len)
+uint8_t canSendCmd(uint8_t *cmd, uint8_t len)
 {
-  uint32_t txMailBox = CAN_TX_MAILBOX0;
-
-txMsg.StdId = id;
-txMsg.ExtId = id;
-txMsg.IDE = CAN_ID_STD;
-txMsg.RTR = CAN_RTR_DATA;
-txMsg.DLC = len;
-
-  if (HAL_CAN_AddTxMessage(&hcan, &txMsg, msg, &txMailBox) != HAL_OK) /* å‘é?æ¶ˆæ? */
-  {
-    return 1;
-  }
-
-  WAIT(HAL_CAN_GetTxMailboxesFreeLevel(&hcan) == 3); /* ç­‰å¾…å‘é?å®Œæˆ?,æ‰?æœ‰é‚®ç®?(æœ‰ä¸‰ä¸ªé‚®ç®?)ä¸ºç©º */
-
-  return 0;
+    uint8_t i = 0;
+    uint8_t j = 0;
+    uint8_t k = 0; 
+    uint8_t packNum =0;
+    uint8_t *msg;
+    uint32_t txMailBox = CAN_TX_MAILBOX0;
+    
+    j = len - 2;
+    
+    while(i < j)
+    {
+        k = j - i;
+        
+        txMsg.StdId = 0x00;
+        txMsg.ExtId = ((uint32_t)cmd[0] << 8) | (uint32_t)packNum;
+        txMsg.IDE = CAN_ID_EXT;
+        txMsg.RTR = CAN_RTR_DATA;
+        
+        msg[0] = cmd[1];
+        
+        if(k < 8)
+        {
+            for (uint8_t l = 0; l < k; l++, i++)
+                msg[l + 1] = cmd[i + 2];
+            txMsg.DLC = k + 1;
+        }
+        else
+        {
+            for (uint8_t l = 0; l < 7; l++, i++)
+                msg[l + 1] = cmd[i + 2];
+            txMsg.DLC = 8;
+        }
+        if (HAL_CAN_AddTxMessage(&hcan, &txMsg, msg, &txMailBox) != HAL_OK)
+            return 1;
+        
+    }
+    return 0;
 }
+
+
+
+
 uint8_t canReceiveMsg(uint32_t id, uint8_t *buf)
 {
   if (HAL_CAN_GetRxFifoFillLevel(&hcan, CAN_RX_FIFO0) == 0)

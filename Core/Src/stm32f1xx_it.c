@@ -22,6 +22,10 @@
 #include "stm32f1xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "rtc.h"
+#include "can.h"
+#include "usart.h"
+#include "../../User/Manager/MsgManage/MsgManage.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -249,16 +253,14 @@ void DMA1_Channel3_IRQHandler(void)
 void USB_LP_CAN1_RX0_IRQHandler(void)
 {
   /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 0 */
-  uint8_t rxBuf[8];
   uint32_t id;
   /* USER CODE END USB_LP_CAN1_RX0_IRQn 0 */
   HAL_CAN_IRQHandler(&hcan);
   /* USER CODE BEGIN USB_LP_CAN1_RX0_IRQn 1 */
   // 鎺ユ敹锟??鍖呮暟锟??
-  canReceiveMsg(id, rxBuf);
+  canReceiveMsg(id, canRxBuf);
   // 锟??甯ф暟鎹帴鏀跺畬鎴愶紝缃綅甯ф爣蹇椾綅
-  canRxFlag = 1;
-//  canMsgProcess();
+  canRxFlag = true;
   /* USER CODE END USB_LP_CAN1_RX0_IRQn 1 */
 }
 
@@ -323,11 +325,13 @@ void TIM4_IRQHandler(void)
 void USART1_IRQHandler(void)
 {
   /* USER CODE BEGIN USART1_IRQn 0 */
-
   /* USER CODE END USART1_IRQn 0 */
   HAL_UART_IRQHandler(&huart1);
   /* USER CODE BEGIN USART1_IRQn 1 */
-
+    while (HAL_UART_Receive_IT(&huart1, (uint8_t *)usart1Data.halBuffer, USART1_HAL_RXBUFFER_LEN) != HAL_OK)     /* 重新开启中断并接收数据 */
+    {
+        /* 如果出错会卡死在这里 */
+    }
   /* USER CODE END USART1_IRQn 1 */
 }
 
@@ -364,10 +368,10 @@ void USART3_IRQHandler(void)
     temp = huart3.Instance->DR;
     HAL_UART_DMAStop(&huart3);
     temp = hdma_usart3_rx.Instance->CNDTR;
-    OpennMv_Data.Rx_len = FORMDATA_RXBUFFER_LEN - temp;
-	OpenMvData_Process(&OpennMv_Data);
+    OpennMvData.Rx_len = FORMDATA_RXBUFFER_LEN - temp;
+	OpenMvDataProcess(&OpennMvData);
   }
-  HAL_UART_Receive_DMA(&huart3, OpennMv_Data.RxBuffer, FORMDATA_RXBUFFER_LEN);
+  HAL_UART_Receive_DMA(&huart3, OpennMvData.RxBuffer, FORMDATA_RXBUFFER_LEN);
   /* USER CODE END USART3_IRQn 1 */
 }
 

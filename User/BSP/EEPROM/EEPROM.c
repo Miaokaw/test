@@ -1,4 +1,5 @@
 #include "EEPROM.h"
+#include "i2c.h"
 
 void eepromPageWrite(uint8_t addr, uint8_t *data, uint8_t len)
 {
@@ -16,7 +17,7 @@ void eepromPageWrite(uint8_t addr, uint8_t *data, uint8_t len)
     HAL_Delay(10);
 }
 
-void eepromSequentialRead(uint8_t addr, uint8_t *buffer,uint8_t len)
+void eepromSequentialRead(uint8_t addr, uint8_t *buffer, uint8_t len)
 {
     i2cStart();
     i2cSendByte(EEPROM_ADDR + WRITE);
@@ -26,7 +27,7 @@ void eepromSequentialRead(uint8_t addr, uint8_t *buffer,uint8_t len)
     i2cStart();
     i2cSendByte(EEPROM_ADDR + READ);
     i2cWaitAck();
-    for(uint8_t i = 0; i < len - 1; i++)
+    for (uint8_t i = 0; i < len - 1; i++)
     {
         buffer[i] = i2cReadByte();
         REPLY(ACK);
@@ -49,4 +50,3 @@ uint8_t eepromTest(void)
         return 0;
     return 1;
 }
-

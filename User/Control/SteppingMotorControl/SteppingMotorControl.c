@@ -289,7 +289,49 @@ uint8_t clawStateChange(ClawState state)
     return 0;
 }
 
+void move(uint8_t motor, int32_t v1, float accTime, float decTime, int32_t step)
+{
+    switch(motor)
+    {
+        case 1:
+            motorMove(&motor1, v1, accTime, decTime, step);
+            break;
+        case 2:
+            motorMove(&motor2, v1, accTime, decTime, step);
+            break;
+        case 3:
+            motorMove(&motor3, v1, accTime, decTime, step);
+            break;
+        case 4:
+            motorMove(&motor4, v1, accTime, decTime, step);
+            break;
+        case 5:
+            motorMove(&motor5, v1, accTime, decTime, step);
+            break;
+    }
+}
 
+void move2Pos(uint8_t motor, int32_t v1, float accTime, float decTime, int32_t pos)
+{
+    switch(motor)
+    {
+        case 1:
+            motorMove2Pos(&motor1, v1, accTime, decTime, pos);
+            break;
+        case 2:
+            motorMove2Pos(&motor2, v1, accTime, decTime, pos);
+            break;
+        case 3:
+            motorMove2Pos(&motor3, v1, accTime, decTime, pos);
+            break;
+        case 4:
+            motorMove2Pos(&motor4, v1, accTime, decTime, pos);
+            break;
+        case 5:
+            motorMove2Pos(&motor5, v1, accTime, decTime, pos);
+            break;
+    }
+}
 /**
  * @brief 控制电机移动
  *
@@ -352,13 +394,15 @@ void motorMove2Pos(MotorControl *motor, int32_t v1, float accTime, float decTime
     int32_t step = pos - motor->actPos;
     int32_t flag = 1;
     uint8_t err = motorMove(motor, v1, accTime, decTime, step);
-    if (step < 0){
+    if (step < 0)
+    {
         flag = -1;
     }
-    if (err == 2){
-        float time = (float )(flag * step / v1);
-        motorMove(motor, v1, time, time, step);
-    }
+   if (err == 2)
+   {
+      float t = (float)(flag * step / v1);
+      motorMove(motor, v1, t, t, step);
+   }
 }
 /**
  * @brief 步进电机超限保护

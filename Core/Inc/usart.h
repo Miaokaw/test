@@ -29,6 +29,7 @@ extern "C" {
 #include "main.h"
 
 /* USER CODE BEGIN Includes */
+#include "../../User/Manager/MsgManage/MsgManage.h"
 /* USER CODE END Includes */
 
 extern UART_HandleTypeDef huart1;

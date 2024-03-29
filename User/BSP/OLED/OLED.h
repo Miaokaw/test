@@ -5,7 +5,7 @@
 #include "../../Tools/Tools/Tools.h"
 #include "OLEDLAB.h"
 
-#define OLED_ADDRESS	0x78 //Í¨¹ıµ÷Õû0Rµç×è,ÆÁ¿ÉÒÔ0x78ºÍ0x7AÁ½¸öµØÖ· -- Ä¬ÈÏ0x78
+#define OLED_ADDRESS	0x78 //é€šè¿‡è°ƒæ•´0Rç”µé˜»,å±å¯ä»¥0x78å’Œ0x7Aä¸¤ä¸ªåœ°å€ -- é»˜è®¤0x78
 
 void oledWriteByte(uint8_t addr,uint8_t data);
 void oledWriteCmd(uint8_t I2C_Command);
