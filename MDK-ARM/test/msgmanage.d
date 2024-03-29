@@ -61,3 +61,4 @@ test\msgmanage.o: ../Core/Inc/usart.h
 test\msgmanage.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\msgmanage.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\msgmanage.o: ../Core/Inc/tim.h
+test\msgmanage.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

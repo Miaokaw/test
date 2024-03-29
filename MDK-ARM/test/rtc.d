@@ -61,3 +61,4 @@ test\rtc.o: ../Core/Inc/usart.h
 test\rtc.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\rtc.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\rtc.o: ../Core/Inc/tim.h
+test\rtc.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

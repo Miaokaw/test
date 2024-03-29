@@ -47,6 +47,7 @@
 "test\remote.o"
 "test\menu.o"
 "test\zdtmotorcontrol.o"
+"test\timmanage.o"
 "test\usmart.o"
 "test\usmart_config.o"
 "test\usmart_port.o"

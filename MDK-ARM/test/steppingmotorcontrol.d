@@ -60,4 +60,5 @@ test\steppingmotorcontrol.o: ../Core/Inc/../../User/Control/ServoControl/ServoCo
 test\steppingmotorcontrol.o: ../Core/Inc/usart.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
+test\steppingmotorcontrol.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h
 test\steppingmotorcontrol.o: ../Core/Inc/tim.h

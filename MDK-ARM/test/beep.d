@@ -61,3 +61,4 @@ test\beep.o: ../Core/Inc/usart.h
 test\beep.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\beep.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\beep.o: ../Core/Inc/tim.h
+test\beep.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

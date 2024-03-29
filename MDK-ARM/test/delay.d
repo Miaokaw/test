@@ -61,3 +61,4 @@ test\delay.o: ../Core/Inc/usart.h
 test\delay.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\delay.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\delay.o: ../Core/Inc/tim.h
+test\delay.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

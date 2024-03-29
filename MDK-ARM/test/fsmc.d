@@ -61,3 +61,4 @@ test\fsmc.o: ../Core/Inc/usart.h
 test\fsmc.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\fsmc.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\fsmc.o: ../Core/Inc/tim.h
+test\fsmc.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

@@ -62,4 +62,5 @@ test\usmart_str.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
 test\usmart_str.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\usmart_str.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\usmart_str.o: ../Core/Inc/tim.h
+test\usmart_str.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h
 test\usmart_str.o: ..\User\Tools\USMART\usmart_str.h

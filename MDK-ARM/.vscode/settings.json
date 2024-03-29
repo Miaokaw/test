@@ -13,6 +13,12 @@
         "menu.h": "c",
         "gpio.h": "c",
         "remote.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "timmanage.h": "c",
+        "zdtmotorcontrol.h": "c",
+        "oled.h": "c",
+        "beep.h": "c",
+        "math.h": "c",
+        "tools.h": "c"
     }
 }

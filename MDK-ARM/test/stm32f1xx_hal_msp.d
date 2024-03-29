@@ -60,3 +60,4 @@ test\stm32f1xx_hal_msp.o: ../Core/Inc/usart.h
 test\stm32f1xx_hal_msp.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\stm32f1xx_hal_msp.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\stm32f1xx_hal_msp.o: ../Core/Inc/tim.h
+test\stm32f1xx_hal_msp.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

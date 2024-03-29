@@ -41,8 +41,6 @@ extern CAN_HandleTypeDef hcan;
 void MX_CAN_Init(void);
 
 /* USER CODE BEGIN Prototypes */
-
-
   extern CAN_TxHeaderTypeDef txMsg;
   extern CAN_RxHeaderTypeDef rxMsg;
   extern uint8_t canRxBuf[8];

@@ -60,4 +60,5 @@ test\servocontrol.o: ../Core/Inc/../../User/Control/ServoControl/ServoControl.h
 test\servocontrol.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\servocontrol.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\servocontrol.o: ../Core/Inc/tim.h
+test\servocontrol.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h
 test\servocontrol.o: ../Core/Inc/usart.h

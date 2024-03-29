@@ -61,3 +61,4 @@ test\key.o: ../Core/Inc/usart.h
 test\key.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\key.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\key.o: ../Core/Inc/tim.h
+test\key.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

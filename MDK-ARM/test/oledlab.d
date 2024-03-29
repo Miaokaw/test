@@ -61,3 +61,4 @@ test\oledlab.o: ../Core/Inc/usart.h
 test\oledlab.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\oledlab.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\oledlab.o: ../Core/Inc/tim.h
+test\oledlab.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

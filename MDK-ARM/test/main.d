@@ -60,6 +60,7 @@ test\main.o: ../Core/Inc/usart.h
 test\main.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\main.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\main.o: ../Core/Inc/tim.h
+test\main.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h
 test\main.o: ../Core/Inc/can.h
 test\main.o: ../Core/Inc/dma.h
 test\main.o: ../Core/Inc/rtc.h

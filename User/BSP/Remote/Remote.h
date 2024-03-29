@@ -28,6 +28,10 @@ typedef enum
     NOTHING = 0,
 }KEYtype;
 
+extern uint8_t remoteFlag;
+extern uint32_t remoteData; /* 红外接收到的数据 */
+extern uint8_t remoteCnt;  /* 按键按下的次数 */
+
 uint8_t remoteScan(void);
 
 #endif  /* __REMOTE_H__ */ 

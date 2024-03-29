@@ -61,3 +61,4 @@ test\tools.o: ../Core/Inc/usart.h
 test\tools.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\tools.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\tools.o: ../Core/Inc/tim.h
+test\tools.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

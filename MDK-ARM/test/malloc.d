@@ -61,3 +61,4 @@ test\malloc.o: ../Core/Inc/usart.h
 test\malloc.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\malloc.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\malloc.o: ../Core/Inc/tim.h
+test\malloc.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

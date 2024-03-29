@@ -61,3 +61,4 @@ test\eeprom.o: ../Core/Inc/usart.h
 test\eeprom.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\eeprom.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\eeprom.o: ../Core/Inc/tim.h
+test\eeprom.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

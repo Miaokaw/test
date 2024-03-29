@@ -60,6 +60,7 @@ test\stm32f1xx_it.o: ../Core/Inc/usart.h
 test\stm32f1xx_it.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\stm32f1xx_it.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\stm32f1xx_it.o: ../Core/Inc/tim.h
+test\stm32f1xx_it.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h
 test\stm32f1xx_it.o: ../Core/Inc/stm32f1xx_it.h
 test\stm32f1xx_it.o: ../Core/Inc/rtc.h
 test\stm32f1xx_it.o: ../Core/Inc/can.h

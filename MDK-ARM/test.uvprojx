@@ -2175,6 +2175,11 @@
               <FileType>1</FileType>
               <FilePath>..\User\Control\ZDTmotorControl\ZDTmotorControl.c</FilePath>
             </File>
+            <File>
+              <FileName>TimManage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Manager\TimManage\TimManage.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

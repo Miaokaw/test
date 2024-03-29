@@ -62,3 +62,4 @@ test\i2c.o: ../Core/Inc/usart.h
 test\i2c.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\i2c.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\i2c.o: ../Core/Inc/tim.h
+test\i2c.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

@@ -61,3 +61,4 @@ test\remote.o: ../Core/Inc/usart.h
 test\remote.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\remote.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\remote.o: ../Core/Inc/tim.h
+test\remote.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

@@ -61,3 +61,4 @@ test\dma.o: ../Core/Inc/usart.h
 test\dma.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\dma.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\dma.o: ../Core/Inc/tim.h
+test\dma.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

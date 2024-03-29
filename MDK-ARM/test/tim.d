@@ -61,3 +61,4 @@ test\tim.o: ../Core/Inc/usart.h
 test\tim.o: ../Core/Inc/../../User/Control/ZDTmotorControl/ZDTmotorControl.h
 test\tim.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\tim.o: ../Core/Inc/tim.h
+test\tim.o: ../Core/Inc/../../User/Manager/TimManage/TimManage.h

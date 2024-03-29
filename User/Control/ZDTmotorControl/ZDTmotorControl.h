@@ -7,44 +7,44 @@
 
 typedef enum 
 {
-  S_VER   = 0,      /* ¶ÁÈ¡¹Ì¼ş°æ±¾ºÍ¶ÔÓ¦µÄÓ²¼ş°æ±¾ */
-  S_RL    = 1,      /* ¶ÁÈ¡¶ÁÈ¡Ïàµç×èºÍÏàµç¸Ğ */
-  S_PID   = 2,      /* ¶ÁÈ¡PID²ÎÊı */
-  S_ORG   = 3,      /* ¶ÁÈ¡»ØÁã²ÎÊı */
-  S_VBUS  = 4,      /* ¶ÁÈ¡×ÜÏßµçÑ¹ */
-  S_CBUS  = 5,      /* ¶ÁÈ¡×ÜÏßµçÁ÷ */
-  S_CPHA  = 6,      /* ¶ÁÈ¡ÏàµçÁ÷ */
-  S_ENC   = 7,      /* ¶ÁÈ¡±àÂëÆ÷Ô­Ê¼Öµ */
-  S_CPUL  = 8,      /* ¶ÁÈ¡ÊµÊ±Âö³åÊı£¨¸ù¾İÊµÊ±Î»ÖÃ¼ÆËãµÃµ½µÄÂö³åÊı£© */
-  S_ENCL  = 9,      /* ¶ÁÈ¡¾­¹ıÏßĞÔ»¯Ğ£×¼ºóµÄ±àÂëÆ÷Öµ */
-  S_TPUL  = 10,     /* ¶ÁÈ¡ÊäÈëÂö³åÊı */
-  S_TPOS  = 11,     /* ¶ÁÈ¡µç»úÄ¿±êÎ»ÖÃ */
-  S_OPOS  = 12,     /* ¶ÁÈ¡µç»úÊµÊ±Éè¶¨µÄÄ¿±êÎ»ÖÃ£¨¿ª»·Ä£Ê½µÄÊµÊ±Î»ÖÃ£© */
-  S_VEL   = 13,     /* ¶ÁÈ¡µç»úÊµÊ±×ªËÙ */
-  S_CPOS  = 14,     /* ¶ÁÈ¡µç»úÊµÊ±Î»ÖÃ£¨»ùÓÚ½Ç¶È±àÂëÆ÷ÀÛ¼ÓµÄµç»úÊµÊ±Î»ÖÃ£© */
-  S_PERR  = 15,     /* ¶ÁÈ¡µç»úÎ»ÖÃÎó²î */
-  S_TEMP  = 16,     /* ¶ÁÈ¡µç»úÊµÊ±ÎÂ¶È */
-  S_SFLAG = 17,     /* ¶ÁÈ¡×´Ì¬±êÖ¾Î» */
-  S_OFLAG = 18,     /* ¶ÁÈ¡»ØÁã×´Ì¬±êÖ¾Î» */
-  S_Conf  = 19,     /* ¶ÁÈ¡Çı¶¯²ÎÊı */
-  S_State = 20,     /* ¶ÁÈ¡ÏµÍ³×´Ì¬²ÎÊı */
+  S_VER   = 0,      /* è¯»å–å›ºä»¶ç‰ˆæœ¬å’Œå¯¹åº”çš„ç¡¬ä»¶ç‰ˆæœ¬ */
+  S_RL    = 1,      /* è¯»å–è¯»å–ç›¸ç”µé˜»å’Œç›¸ç”µæ„Ÿ */
+  S_PID   = 2,      /* è¯»å–PIDå‚æ•° */
+  S_ORG   = 3,      /* è¯»å–å›é›¶å‚æ•° */
+  S_VBUS  = 4,      /* è¯»å–æ€»çº¿ç”µå‹ */
+  S_CBUS  = 5,      /* è¯»å–æ€»çº¿ç”µæµ */
+  S_CPHA  = 6,      /* è¯»å–ç›¸ç”µæµ */
+  S_ENC   = 7,      /* è¯»å–ç¼–ç å™¨åŸå§‹å€¼ */
+  S_CPUL  = 8,      /* è¯»å–å®æ—¶è„‰å†²æ•°ï¼ˆæ ¹æ®å®æ—¶ä½ç½®è®¡ç®—å¾—åˆ°çš„è„‰å†²æ•°ï¼‰ */
+  S_ENCL  = 9,      /* è¯»å–ç»è¿‡çº¿æ€§åŒ–æ ¡å‡†åçš„ç¼–ç å™¨å€¼ */
+  S_TPUL  = 10,     /* è¯»å–è¾“å…¥è„‰å†²æ•° */
+  S_TPOS  = 11,     /* è¯»å–ç”µæœºç›®æ ‡ä½ç½® */
+  S_OPOS  = 12,     /* è¯»å–ç”µæœºå®æ—¶è®¾å®šçš„ç›®æ ‡ä½ç½®ï¼ˆå¼€ç¯æ¨¡å¼çš„å®æ—¶ä½ç½®ï¼‰ */
+  S_VEL   = 13,     /* è¯»å–ç”µæœºå®æ—¶è½¬é€Ÿ */
+  S_CPOS  = 14,     /* è¯»å–ç”µæœºå®æ—¶ä½ç½®ï¼ˆåŸºäºè§’åº¦ç¼–ç å™¨ç´¯åŠ çš„ç”µæœºå®æ—¶ä½ç½®ï¼‰ */
+  S_PERR  = 15,     /* è¯»å–ç”µæœºä½ç½®è¯¯å·® */
+  S_TEMP  = 16,     /* è¯»å–ç”µæœºå®æ—¶æ¸©åº¦ */
+  S_SFLAG = 17,     /* è¯»å–çŠ¶æ€æ ‡å¿—ä½ */
+  S_OFLAG = 18,     /* è¯»å–å›é›¶çŠ¶æ€æ ‡å¿—ä½ */
+  S_Conf  = 19,     /* è¯»å–é©±åŠ¨å‚æ•° */
+  S_State = 20,     /* è¯»å–ç³»ç»ŸçŠ¶æ€å‚æ•° */
 }SysSingtype;
 
-void resetCurPosToZero(uint8_t addr); // ½«µ±Ç°Î»ÖÃÇåÁã
-void resetClogPro(uint8_t addr); // ½â³ı¶Â×ª±£»¤
-void readSysParams(uint8_t addr, SysSingtype s); // ¶ÁÈ¡²ÎÊı
-void modifyCtrlMode(uint8_t addr, bool svF, uint8_t ctrlMode); // ·¢ËÍÃüÁîÇĞ»»¿ª»·/±Õ»·¿ØÖÆÄ£Ê½
-void enControl(uint8_t addr, bool state, uint8_t snF); // µç»úÊ¹ÄÜ¿ØÖÆ
-void torqueControl(uint8_t addr, uint8_t sign, uint16_t tRamp, uint16_t torque, uint8_t snF); // Á¦¾ØÄ£Ê½¿ØÖÆ
-void velocityControl(uint8_t addr, uint8_t dir, uint16_t vRamp, float velocity, uint8_t snF); // ËÙ¶ÈÄ£Ê½¿ØÖÆ
-void bypassPositionLVControl(uint8_t addr, uint8_t dir, float velocity, float position, uint8_t raf, uint8_t snF); // Ö±Í¨ÏŞËÙÎ»ÖÃÄ£Ê½¿ØÖÆ
-void trajPositionControl(uint8_t addr, uint8_t dir, uint16_t acc, uint16_t dec, float velocity, float position, uint8_t raf, uint8_t snF); // ÌİĞÎÇúÏß¼Ó¼õËÙÎ»ÖÃÄ£Ê½¿ØÖÆ
-void stopNow(uint8_t addr, uint8_t snF); // ÈÃµç»úÁ¢¼´Í£Ö¹ÔË¶¯
-void synchronousmotion(uint8_t addr); // ´¥·¢¶à»úÍ¬²½¿ªÊ¼ÔË¶¯
-void originSetO(uint8_t addr, bool svF); // ÉèÖÃµ¥È¦»ØÁãµÄÁãµãÎ»ÖÃ
-void originModifyParams(uint8_t addr, bool svF, uint8_t oMode, uint8_t oDir, uint16_t oVel, uint32_t oTm, uint16_t slVel, uint16_t slMa, uint16_t slMs, bool potF); // ĞŞ¸Ä»ØÁã²ÎÊı
-void originTriggerReturn(uint8_t addr, uint8_t oMode, bool snF); // ·¢ËÍÃüÁî´¥·¢»ØÁã
-void originInterrupt(uint8_t addr); // Ç¿ÖÆÖĞ¶Ï²¢ÍË³ö»ØÁã
-void receiveData(uint8_t *rxCmd, uint8_t *rxCount); // ·µ»ØÊı¾İ½ÓÊÕº¯Êı
+void resetCurPosToZero(uint8_t addr); // å°†å½“å‰ä½ç½®æ¸…é›¶
+void resetClogPro(uint8_t addr); // è§£é™¤å µè½¬ä¿æŠ¤
+void readSysParams(uint8_t addr, SysSingtype s); // è¯»å–å‚æ•°
+void modifyCtrlMode(uint8_t addr, bool svF, uint8_t ctrlMode); // å‘é€å‘½ä»¤åˆ‡æ¢å¼€ç¯/é—­ç¯æ§åˆ¶æ¨¡å¼
+void enControl(uint8_t addr, bool state, uint8_t snF); // ç”µæœºä½¿èƒ½æ§åˆ¶
+void torqueControl(uint8_t addr, uint8_t sign, uint16_t tRamp, uint16_t torque, uint8_t snF); // åŠ›çŸ©æ¨¡å¼æ§åˆ¶
+void velocityControl(uint8_t addr, uint8_t dir, uint16_t vRamp, float velocity, uint8_t snF); // é€Ÿåº¦æ¨¡å¼æ§åˆ¶
+void bypassPositionLVControl(uint8_t addr, uint8_t dir, float velocity, float position, uint8_t raf, uint8_t snF); // ç›´é€šé™é€Ÿä½ç½®æ¨¡å¼æ§åˆ¶
+void trajPositionControl(uint8_t addr, uint8_t dir, uint16_t acc, uint16_t dec, float velocity, float position, uint8_t raf, uint8_t snF); // æ¢¯å½¢æ›²çº¿åŠ å‡é€Ÿä½ç½®æ¨¡å¼æ§åˆ¶
+void stopNow(uint8_t addr, uint8_t snF); // è®©ç”µæœºç«‹å³åœæ­¢è¿åŠ¨
+void synchronousmotion(uint8_t addr); // è§¦å‘å¤šæœºåŒæ­¥å¼€å§‹è¿åŠ¨
+void originSetO(uint8_t addr, bool svF); // è®¾ç½®å•åœˆå›é›¶çš„é›¶ç‚¹ä½ç½®
+void originModifyParams(uint8_t addr, bool svF, uint8_t oMode, uint8_t oDir, uint16_t oVel, uint32_t oTm, uint16_t slVel, uint16_t slMa, uint16_t slMs, bool potF); // ä¿®æ”¹å›é›¶å‚æ•°
+void originTriggerReturn(uint8_t addr, uint8_t oMode, bool snF); // å‘é€å‘½ä»¤è§¦å‘å›é›¶
+void originInterrupt(uint8_t addr); // å¼ºåˆ¶ä¸­æ–­å¹¶é€€å‡ºå›é›¶
+void receiveData(uint8_t *rxCmd, uint8_t *rxCount); // è¿”å›æ•°æ®æ¥æ”¶å‡½æ•°
 
 #endif /* __ZDTMOTORCONTROL_H__ */
