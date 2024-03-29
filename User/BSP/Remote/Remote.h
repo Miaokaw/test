@@ -29,8 +29,10 @@ typedef enum
 }KEYtype;
 
 extern uint8_t remoteFlag;
-extern uint32_t remoteData; /* ºìÍâ½ÓÊÕµ½µÄÊý¾Ý */
-extern uint8_t remoteCnt;  /* °´¼ü°´ÏÂµÄ´ÎÊý */
+extern uint32_t remoteData; /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Õµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
+extern uint8_t remoteCnt;  /* ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÂµÄ´ï¿½ï¿½ï¿½ */
+
+extern uint8_t lastSta;
 
 uint8_t remoteScan(void);
 

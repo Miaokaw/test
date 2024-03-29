@@ -3,6 +3,21 @@
 uint8_t pass = 0;
 void testProcess(void)
 {    
+
+    for (uint8_t i=0;i<3;i++){
+        getAnD(&controlData,OpennMv_Data.distanse,OpennMv_Data.cx,OpennMv_Data.cy);
+        servoAction(SPIN, 2360 - (controlData.deltaTheta/3.14*180)*ANGELTOPWM, 3000);
+        HAL_Delay(1000);
+        motorMove(&motor1, 1600, 0.05, 0.05, -controlData.delteDistanse * DISTOSTEP);
+        waitS(motor1);
+        beepBeep(1);
+        HAL_Delay(5000);
+        beepBeep(1);
+    }/*迭代三次，让爪子运动至槽的上方*/
+    
+    
+    
+    
 //    servoAction(ARM, 2150, 5000);  舵机运动，控制一二号舵机运动
 //    clawStateChange(OPEN);  爪子抓放
 //    motorMove(&motor1, 9600, 2, 2, 25500);  电机移动

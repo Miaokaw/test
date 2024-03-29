@@ -2101,6 +2101,11 @@
           <GroupName>User</GroupName>
           <Files>
             <File>
+<<<<<<< HEAD
+              <FileName>Menu.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\APP\Menu\Menu.c</FilePath>
+=======
               <FileName>Delay.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Tools\Delay\Delay.c</FilePath>
@@ -2129,6 +2134,7 @@
               <FileName>SteppingMotorControl.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Control\SteppingMotorControl\SteppingMotorControl.c</FilePath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
             </File>
             <File>
               <FileName>Beep.c</FileName>
@@ -2166,6 +2172,41 @@
               <FilePath>..\User\BSP\Remote\Remote.c</FilePath>
             </File>
             <File>
+<<<<<<< HEAD
+              <FileName>Process.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Control\Process\Process.c</FilePath>
+            </File>
+            <File>
+              <FileName>ServoControl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Control\ServoControl\ServoControl.c</FilePath>
+            </File>
+            <File>
+              <FileName>SteppingMotorControl.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Control\SteppingMotorControl\SteppingMotorControl.c</FilePath>
+            </File>
+            <File>
+              <FileName>MsgManage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Manager\MsgManage\MsgManage.c</FilePath>
+            </File>
+            <File>
+              <FileName>Delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Tools\Delay\Delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>Tools.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Tools\Tools\Tools.c</FilePath>
+            </File>
+            <File>
+              <FileName>ArmMoving.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\Arm\ArmMoving.c</FilePath>
+=======
               <FileName>Menu.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\APP\Menu\Menu.c</FilePath>
@@ -2204,6 +2245,7 @@
               <FileName>usmart_str.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\Tools\USMART\usmart_str.c</FilePath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
             </File>
           </Files>
         </Group>

@@ -25,7 +25,8 @@ void servoInit(void)
         servo[i].Angel = 1500; /* 90度 */
     }
     servoAction(ARM, 1200, 5000);
-    servoAction(SPIN, 580, 5000);
+    //servoAction(SPIN, 1100, 5000); 调试时改动
+    servoAction(SPIN, 2360, 5000);
     servoAction(CLAW, 1320, 5000);
 }
 

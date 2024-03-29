@@ -151,7 +151,60 @@
           <Name>-U-O142 -O2254 -S0 -C0 -N00("ARM CoreSight SW-DP") -D00(2BA01477) -L00(0) -TO18 -TC10000000 -TP21 -TDS8007 -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20000000 -FC800 -FN1 -FF0STM32F10x_512 -FS08000000 -FL080000 -FP0($$Device:STM32F103ZE$Flash\STM32F10x_512.FLM)</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
+<<<<<<< HEAD
+      <Breakpoint>
+        <Bp>
+          <Number>0</Number>
+          <Type>0</Type>
+          <LineNumber>8</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134254798</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>..\User\Control\Process\Process.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\test\../User/Control/Process/Process.c\8</Expression>
+        </Bp>
+        <Bp>
+          <Number>1</Number>
+          <Type>0</Type>
+          <LineNumber>165</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134245204</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>../Core/Src/main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\test\../Core/Src/main.c\165</Expression>
+        </Bp>
+        <Bp>
+          <Number>2</Number>
+          <Type>0</Type>
+          <LineNumber>97</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134244782</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>../Core/Src/main.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\test\../Core/Src/main.c\97</Expression>
+        </Bp>
+      </Breakpoint>
+=======
       <Breakpoint/>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
       <WatchWindow1>
         <Ww>
           <count>0</count>
@@ -181,17 +234,49 @@
         <Ww>
           <count>5</count>
           <WinNumber>1</WinNumber>
+<<<<<<< HEAD
+          <ItemText>mainMenuPoint</ItemText>
+=======
           <ItemText>mainMenu,0x0A</ItemText>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
         </Ww>
         <Ww>
           <count>6</count>
           <WinNumber>1</WinNumber>
+<<<<<<< HEAD
+          <ItemText>showMenuer</ItemText>
+=======
           <ItemText>setpMot,0x0A</ItemText>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
         </Ww>
         <Ww>
           <count>7</count>
           <WinNumber>1</WinNumber>
+<<<<<<< HEAD
+          <ItemText>OpennMv_Data</ItemText>
+        </Ww>
+        <Ww>
+          <count>8</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>controlData</ItemText>
+        </Ww>
+        <Ww>
+          <count>9</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>delta_x</ItemText>
+        </Ww>
+        <Ww>
+          <count>10</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>delta_y</ItemText>
+        </Ww>
+        <Ww>
+          <count>11</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>angle</ItemText>
+=======
           <ItemText>usart1Data</ItemText>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -232,6 +317,13 @@
       <pszMrule></pszMrule>
       <pSingCmds></pSingCmds>
       <pMultCmds></pMultCmds>
+<<<<<<< HEAD
+      <pMisraNamep></pMisraNamep>
+      <pszMrulep></pszMrulep>
+      <pSingCmdsp></pSingCmdsp>
+      <pMultCmdsp></pMultCmdsp>
+=======
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
       <DebugDescription>
         <Enable>1</Enable>
         <EnableLog>0</EnableLog>
@@ -678,12 +770,13 @@
     <File>
       <GroupNumber>5</GroupNumber>
       <FileNumber>34</FileNumber>
+<<<<<<< HEAD
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\User\Tools\Delay\Delay.c</PathWithFileName>
-      <FilenameWithoutPath>Delay.c</FilenameWithoutPath>
+      <PathWithFileName>..\User\APP\Menu\Menu.c</PathWithFileName>
+      <FilenameWithoutPath>Menu.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -694,8 +787,8 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\User\Tools\Tools\Tools.c</PathWithFileName>
-      <FilenameWithoutPath>Tools.c</FilenameWithoutPath>
+      <PathWithFileName>..\User\BSP\Beep\Beep.c</PathWithFileName>
+      <FilenameWithoutPath>Beep.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -706,14 +799,103 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
-      <PathWithFileName>..\User\Manager\MsgManage\MsgManage.c</PathWithFileName>
-      <FilenameWithoutPath>MsgManage.c</FilenameWithoutPath>
+      <PathWithFileName>..\User\BSP\EEPROM\EEPROM.c</PathWithFileName>
+      <FilenameWithoutPath>EEPROM.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
       <FileNumber>37</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\User\BSP\Key\Key.c</PathWithFileName>
+      <FilenameWithoutPath>Key.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>38</FileNumber>
+=======
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+<<<<<<< HEAD
+      <PathWithFileName>..\User\BSP\Led\Led.c</PathWithFileName>
+      <FilenameWithoutPath>Led.c</FilenameWithoutPath>
+=======
+      <PathWithFileName>..\User\Tools\Delay\Delay.c</PathWithFileName>
+      <FilenameWithoutPath>Delay.c</FilenameWithoutPath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
+      <FileNumber>39</FileNumber>
+=======
+      <FileNumber>35</FileNumber>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+<<<<<<< HEAD
+      <PathWithFileName>..\User\BSP\OLED\OLED.c</PathWithFileName>
+      <FilenameWithoutPath>OLED.c</FilenameWithoutPath>
+=======
+      <PathWithFileName>..\User\Tools\Tools\Tools.c</PathWithFileName>
+      <FilenameWithoutPath>Tools.c</FilenameWithoutPath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
+      <FileNumber>40</FileNumber>
+=======
+      <FileNumber>36</FileNumber>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+<<<<<<< HEAD
+      <PathWithFileName>..\User\BSP\OLED\OLEDLAB.c</PathWithFileName>
+      <FilenameWithoutPath>OLEDLAB.c</FilenameWithoutPath>
+=======
+      <PathWithFileName>..\User\Manager\MsgManage\MsgManage.c</PathWithFileName>
+      <FilenameWithoutPath>MsgManage.c</FilenameWithoutPath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
+      <FileNumber>41</FileNumber>
+=======
+      <FileNumber>37</FileNumber>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\User\BSP\Remote\Remote.c</PathWithFileName>
+      <FilenameWithoutPath>Remote.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>5</GroupNumber>
+      <FileNumber>42</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -725,7 +907,11 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
+      <FileNumber>43</FileNumber>
+=======
       <FileNumber>38</FileNumber>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -737,7 +923,11 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
+      <FileNumber>44</FileNumber>
+=======
       <FileNumber>39</FileNumber>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
@@ -749,6 +939,8 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
+<<<<<<< HEAD
+=======
       <FileNumber>40</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
@@ -809,13 +1001,19 @@
     </File>
     <File>
       <GroupNumber>5</GroupNumber>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
       <FileNumber>45</FileNumber>
       <FileType>1</FileType>
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+<<<<<<< HEAD
+      <PathWithFileName>..\User\Manager\MsgManage\MsgManage.c</PathWithFileName>
+      <FilenameWithoutPath>MsgManage.c</FilenameWithoutPath>
+=======
       <PathWithFileName>..\User\BSP\OLED\OLEDLAB.c</PathWithFileName>
       <FilenameWithoutPath>OLEDLAB.c</FilenameWithoutPath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -826,8 +1024,13 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+<<<<<<< HEAD
+      <PathWithFileName>..\User\Tools\Delay\Delay.c</PathWithFileName>
+      <FilenameWithoutPath>Delay.c</FilenameWithoutPath>
+=======
       <PathWithFileName>..\User\BSP\Remote\Remote.c</PathWithFileName>
       <FilenameWithoutPath>Remote.c</FilenameWithoutPath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -838,8 +1041,13 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+<<<<<<< HEAD
+      <PathWithFileName>..\User\Tools\Tools\Tools.c</PathWithFileName>
+      <FilenameWithoutPath>Tools.c</FilenameWithoutPath>
+=======
       <PathWithFileName>..\User\APP\Menu\Menu.c</PathWithFileName>
       <FilenameWithoutPath>Menu.c</FilenameWithoutPath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
@@ -850,6 +1058,10 @@
       <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
+<<<<<<< HEAD
+      <PathWithFileName>..\User\Arm\ArmMoving.c</PathWithFileName>
+      <FilenameWithoutPath>ArmMoving.c</FilenameWithoutPath>
+=======
       <PathWithFileName>..\User\Control\ZDTmotorControl\ZDTmotorControl.c</PathWithFileName>
       <FilenameWithoutPath>ZDTmotorControl.c</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
@@ -920,6 +1132,7 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\User\Tools\USMART\usmart_str.c</PathWithFileName>
       <FilenameWithoutPath>usmart_str.c</FilenameWithoutPath>
+>>>>>>> ff3ac5d92360aa3de91c5108be90c92ab2c32904
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>

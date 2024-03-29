@@ -82,7 +82,8 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-
+  FormData_Init(&OpennMv_Data);
+  armMovingInit(&controlData);    
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -148,89 +149,95 @@ int main(void)
     /* USER CODE BEGIN 3 */
     key = remoteScan();
 
-    if (key)
-    {
-      switch (key)
-      {
-      case 69:
-        str = "1    ";
-        while (1)
+        if (key)
         {
+            switch (key)
+            {
+            case 69:
+                str = "1    ";
+                while (1){
+                    showMenu(showMenuer, 0);
+                    showMenuer->action(showMenuer);
+                    if (exitMenu) {
+                        exitMenu = 0;
+                        beepBeep(2);
+                        break;
+                    }
+                }
+                break;
+            case 70:
+                str = "2    ";
+                testProcess();
 
-          key = remoteScan();
-          if (key == 69)
-            break;
-          showMenu(showMenuer, 0);
-          showMenuer->action(showMenuer);
+                break;
+            case 71:
+                str = "3    ";
+                motorMove(&motor4, 6400, 0, 0, 1000);
+                break;
+            case 68:
+                str = "4    ";
+                motorMove(&motor4, 6400, 0, 0, -1000);
+                break;
+            case 64:
+                str = "5    ";
+                break;
+            case 67:
+                str = "6    ";
+                break;
+            case 7:
+                str = "7    ";
+                break;
+            case 21:
+                str = "8    ";
+                break;
+            case 9:
+                str = "9    ";
+                break;
+            case 25:
+                str = "0    ";
+                break;
+            case 13:
+                str = "#    ";
+                break;
+            case 22:
+                str = "*    ";
+                break;
+            case 24:
+                str = "UP   ";
+                break;
+            case 82:
+                str = "DOWM ";
+                break;
+            case 8:
+                str = "LEFT ";
+                break;
+            case 90:
+                str = "RIGHT";
+                break;
+            case 28:
+                str = "OK   ";
+                break;
+            default:
+                str = "NULL ";
+                break;
+            }
+            oledCLS();
+            oledShowStr(0, 7, str, 1);
+
         }
-        break;
-      case 70:
-        str = "2    ";
-        break;
-      case 71:
-        str = "3    ";
-        break;
-      case 68:
-        str = "4    ";
-        break;
-      case 64:
-        str = "5    ";
-        break;
-      case 67:
-        str = "6    ";
-        break;
-      case 7:
-        str = "7    ";
-        break;
-      case 21:
-        str = "8    ";
-        break;
-      case 9:
-        str = "9    ";
-        break;
-      case 25:
-        str = "0    ";
-        break;
-      case 13:
-        str = "#    ";
-        break;
-      case 22:
-        str = "*    ";
-        break;
-      case 24:
-        str = "UP   ";
-        break;
-      case 82:
-        str = "DOWM ";
-        break;
-      case 8:
-        str = "LEFT ";
-        break;
-      case 90:
-        str = "RIGHT";
-        break;
-      case 28:
-        str = "OK   ";
-        break;
-      default:
-        str = "NULL ";
-        break;
-      }
-      // oledShowStr(0, 7, str, 1);
-    }
-    else
-    {
-      usmart_scan();
-      HAL_Delay(10);
-    }
+        else
+        {
+            HAL_Delay(10);
+        }
 
     i++;
 
-    if (i == 50)
-    {
-      i = 0;
-      LED_TOGGLE(); /* LED0闪烁 */
-    }
+        if (i == 50)
+        {
+            i = 0;
+            lastSta = 0;
+            LED_TOGGLE(); /* LED0闪烁 */
+        }
   }
   /* USER CODE END 3 */
 }

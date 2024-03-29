@@ -54,7 +54,8 @@ extern "C"
 #include "../../User/Control/SteppingMotorControl/SteppingMotorControl.h"
 #include "../../User/Manager/MsgManage/MsgManage.h"
 #include "../../User/Manager/TimManage/TimManage.h"
-  /* USER CODE END Includes */
+  #include "../../User/Arm/ArmMoving.h"
+/* USER CODE END Includes */
 
   /* Exported types ------------------------------------------------------------*/
   /* USER CODE BEGIN ET */
