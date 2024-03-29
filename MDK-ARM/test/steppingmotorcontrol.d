@@ -8,14 +8,14 @@ test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_d
 test\steppingmotorcontrol.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 test\steppingmotorcontrol.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 test\steppingmotorcontrol.o: ../Drivers/CMSIS/Include/core_cm3.h
-test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdint.h
+test\steppingmotorcontrol.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
 test\steppingmotorcontrol.o: ../Drivers/CMSIS/Include/cmsis_version.h
 test\steppingmotorcontrol.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 test\steppingmotorcontrol.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 test\steppingmotorcontrol.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stddef.h
+test\steppingmotorcontrol.o: E:\keil\ARM\ARMCC\Bin\..\include\stddef.h
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -34,10 +34,10 @@ test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_r
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\steppingmotorcontrol.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
-test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
-test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
-test\steppingmotorcontrol.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
+test\steppingmotorcontrol.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+test\steppingmotorcontrol.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+test\steppingmotorcontrol.o: E:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+test\steppingmotorcontrol.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
 test\steppingmotorcontrol.o: ../Core/Inc/malloc.h
 test\steppingmotorcontrol.o: ../Core/Inc/main.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/BSP/OLED/OLED.h
@@ -56,4 +56,5 @@ test\steppingmotorcontrol.o: ../Core/Inc/../../User/Control/ServoControl/ServoCo
 test\steppingmotorcontrol.o: ../Core/Inc/usart.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\steppingmotorcontrol.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
+test\steppingmotorcontrol.o: ../Core/Inc/../../User/Arm/ArmMoving.h
 test\steppingmotorcontrol.o: ../Core/Inc/tim.h

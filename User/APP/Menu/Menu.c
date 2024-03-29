@@ -1,5 +1,4 @@
 #include "Menu.h"
-#define KEY_EXIT 3
 // typedef struct _menuItem
 //{
 //     char menuName[20];
@@ -9,9 +8,11 @@
 //     struct menuItem *son;
 //     void(*action)();
 // }menuItem;
-struct _menuItem *head = NULL;
 struct _menuItem *showMenuer = NULL;
 struct _menuItem *getEnd = NULL;
+doubleNum numFKey ; 
+uint8_t exitMenu = 0;
+uint8_t mainMenuKey = 0;
 /**
  * 创建一个菜单项并将其添加到父菜单中
  *
@@ -77,14 +78,14 @@ void showMenu(menuItem *shower, uint8_t choosePoint)
             getEnd = getEnd->next;
         } while (getEnd != NULL);
     }
-    if (choosePoint != 0) oledShowStr(0, choosePoint+1, (uint8_t *)">>", 1);
+    oledShowStr(0, choosePoint+2, POINT, 1);
 }
 
 void mainMenuAction(menuItem *t)
 {
-    uint8_t mainMenuKey = 0;
     int mainMenuPoint = 0;
     uint8_t isChange = 0;
+    exitMenu = 0;
     while (1)
     {
         mainMenuKey = remoteScan();
@@ -92,25 +93,25 @@ void mainMenuAction(menuItem *t)
         {
             switch (mainMenuKey)
             {
-                case 82:
+                case 82:                        /*下按钮*/
                     mainMenuPoint++;
-                    if (mainMenuPoint){
-                        mainMenuPoint = 1;
+                    if (mainMenuPoint >= t->sonNum){
+                        mainMenuPoint = 0;
                     } 
                     showMenu(showMenuer, mainMenuPoint);
                     HAL_Delay(100);
                     beepBeep(1);
                     break;
-                case 24:
+                case 24:                        /*上按钮*/
                     mainMenuPoint--;
-                    if (mainMenuPoint == 0){
-                        mainMenuPoint = t->sonNum;
+                    if (mainMenuPoint < 0){
+                        mainMenuPoint = t->sonNum-1;
                     }
                     showMenu(showMenuer, mainMenuPoint);
                     HAL_Delay(100);
                     break;
-                case 28:
-                    showMenu(showMenuer, mainMenuPoint);
+                case 28:                        /*确定按钮*/
+                    //showMenu(showMenuer, mainMenuPoint);
                     if (t->son != NULL)
                     {
                         getEnd = t->son;
@@ -123,9 +124,12 @@ void mainMenuAction(menuItem *t)
                     showMenuer = getEnd;
                     isChange = 1;
                     break;
-                case 13:
-                    showMenuer = t->back;
-                    showMenu(showMenuer, 0);
+                case 13:                        /*返回按钮#*/
+                    if (t->back != NULL){
+                        showMenuer = t->back;
+                    }else {
+                        exitMenu = 1;
+                    }
                     isChange = 1;
                     break;
                 default:
@@ -135,6 +139,7 @@ void mainMenuAction(menuItem *t)
         else
         {
             HAL_Delay(10);
+            lastSta = 0;
             static uint8_t toggleCont = 0;
             if (++toggleCont >= 50)
             {
@@ -145,4 +150,103 @@ void mainMenuAction(menuItem *t)
         if (isChange)
             break;
     }
+}
+
+void getNumFKey(doubleNum *num){
+    uint8_t numKey = 0;
+    //char *stre;
+    uint8_t inum = 0; /*每次输入的值*/
+    uint8_t isfloat = 0;
+    float fnum = 1; /*每次的累乘*/
+    float res = 0;
+    while (1)
+  {
+      
+        numKey = remoteScan();
+        if (numKey)
+        {
+            switch (numKey)
+            {
+            case 69:
+                //stre = "1    ";
+                inum = 1; 
+                break;
+            case 70:
+                //stre = "2    ";
+                inum = 2; 
+                break;
+            case 71:
+                //stre = "3    ";
+                inum = 3; 
+                break;
+            case 68:
+                //stre = "4    ";
+                inum = 4; 
+                break;
+            case 64:
+                //stre = "5    ";
+                inum = 5; 
+                break;
+            case 67:
+                //stre = "6    ";
+                inum = 6; 
+                break;
+            case 7:
+                //stre = "7    ";
+                inum = 7; 
+                break;
+            case 21:
+                //stre = "8    ";
+                inum = 8; 
+                break;
+            case 9:
+                //stre = "9    ";
+                inum = 9; 
+                break;
+            case 25:
+                //stre = "0    ";
+                inum = 0; 
+                break;
+            case 13:
+                //stre = "#    ";   /*小数点*/
+                isfloat = 1;
+                break;
+            case 22:
+               // stre = "*    ";
+                break;
+            case 24:
+                //stre = "UP   ";
+                break;
+            case 82:
+                //stre = "DOWM ";
+                break;
+            case 8:
+                //stre = "LEFT ";
+                break;
+            case 90:
+                //stre = "RIGHT";
+                break;
+            case 28:
+                //stre = "OK   ";   /*确认*/
+                break;
+            default:
+               // stre = "NULL ";
+                break;
+            }
+            if (isfloat){
+                
+            
+            }else{
+                res = res*10+inum*fnum;
+            }
+            
+            oledCLS();
+            oledShowFloat(32,  7, res, 1);
+
+        }
+        else
+        {
+            HAL_Delay(10);
+        }
+  }
 }

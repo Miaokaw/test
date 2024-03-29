@@ -350,10 +350,13 @@ uint8_t motorMove(MotorControl *motor, int32_t v1, float accTime, float decTime,
 void motorMove2Pos(MotorControl *motor, int32_t v1, float accTime, float decTime, int32_t pos)
 {
     int32_t step = pos - motor->actPos;
-   uint8_t err = motorMove(motor, v1, accTime, decTime, step);
-    float time = fabsf((float)step / v1 - 0.01f);
-    if (err == 2)
-    {
+    int32_t flag = 1;
+    uint8_t err = motorMove(motor, v1, accTime, decTime, step);
+    if (step < 0){
+        flag = -1;
+    }
+    if (err == 2){
+        float time = (float )(flag * step / v1);
         motorMove(motor, v1, time, time, step);
     }
 }

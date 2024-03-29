@@ -83,6 +83,7 @@ int main(void)
 
   /* USER CODE BEGIN Init */
   FormData_Init(&OpennMv_Data);
+  armMovingInit(&controlData);    
   /* USER CODE END Init */
 
   /* Configure the system clock */
@@ -117,6 +118,7 @@ int main(void)
   HAL_Delay(1000);
   oledCLS();
   rtcSetTime(2024, 3, 24, 9, 8, 40);
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -152,21 +154,27 @@ showMenuer = mainMenu;
             case 69:
                 str = "1    ";
                 while (1){
-                    
-                key = remoteScan();
-                if (key == 69) break;
-                showMenu(showMenuer, 0);
-                showMenuer->action(showMenuer);
+                    showMenu(showMenuer, 0);
+                    showMenuer->action(showMenuer);
+                    if (exitMenu) {
+                        exitMenu = 0;
+                        beepBeep(2);
+                        break;
+                    }
                 }
                 break;
             case 70:
                 str = "2    ";
+                testProcess();
+
                 break;
             case 71:
                 str = "3    ";
+                motorMove(&motor4, 6400, 0, 0, 1000);
                 break;
             case 68:
                 str = "4    ";
+                motorMove(&motor4, 6400, 0, 0, -1000);
                 break;
             case 64:
                 str = "5    ";
@@ -211,7 +219,8 @@ showMenuer = mainMenu;
                 str = "NULL ";
                 break;
             }
-            //oledShowStr(0, 7, str, 1);
+            oledCLS();
+            oledShowStr(0, 7, str, 1);
 
         }
         else
@@ -224,6 +233,7 @@ showMenuer = mainMenu;
         if (i == 50)
         {
             i = 0;
+            lastSta = 0;
             LED_TOGGLE(); /* LED0闪烁 */
         }
   }

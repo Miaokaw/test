@@ -32,12 +32,7 @@
 "test\stm32f1xx_hal_tim_ex.o"
 "test\stm32f1xx_hal_uart.o"
 "test\system_stm32f1xx.o"
-"test\delay.o"
-"test\tools.o"
-"test\msgmanage.o"
-"test\process.o"
-"test\servocontrol.o"
-"test\steppingmotorcontrol.o"
+"test\menu.o"
 "test\beep.o"
 "test\eeprom.o"
 "test\key.o"
@@ -45,8 +40,14 @@
 "test\oled.o"
 "test\oledlab.o"
 "test\remote.o"
-"test\menu.o"
+"test\process.o"
+"test\servocontrol.o"
+"test\steppingmotorcontrol.o"
+"test\msgmanage.o"
+"test\delay.o"
+"test\tools.o"
+"test\armmoving.o"
 --strict --scatter "test\test.sct"
---summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "test.map" -o test\test.axf

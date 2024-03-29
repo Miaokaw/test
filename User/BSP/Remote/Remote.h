@@ -28,6 +28,8 @@ typedef enum
     NOTHING = 0,
 }KEYtype;
 
+extern uint8_t lastSta;
+
 uint8_t remoteScan(void);
 
 #endif  /* __REMOTE_H__ */ 

@@ -8,14 +8,14 @@ test\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_def.h
 test\usart.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f1xx.h
 test\usart.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/stm32f103xe.h
 test\usart.o: ../Drivers/CMSIS/Include/core_cm3.h
-test\usart.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdint.h
+test\usart.o: E:\keil\ARM\ARMCC\Bin\..\include\stdint.h
 test\usart.o: ../Drivers/CMSIS/Include/cmsis_version.h
 test\usart.o: ../Drivers/CMSIS/Include/cmsis_compiler.h
 test\usart.o: ../Drivers/CMSIS/Include/cmsis_armcc.h
 test\usart.o: ../Drivers/CMSIS/Device/ST/STM32F1xx/Include/system_stm32f1xx.h
 test\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 test\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy/stm32_hal_legacy.h
-test\usart.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stddef.h
+test\usart.o: E:\keil\ARM\ARMCC\Bin\..\include\stddef.h
 test\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rcc_ex.h
 test\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio.h
 test\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_gpio_ex.h
@@ -34,10 +34,10 @@ test\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_rtc_ex.h
 test\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 test\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 test\usart.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-test\usart.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\string.h
-test\usart.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdlib.h
-test\usart.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\stdio.h
-test\usart.o: D:\software\MDK5\ARM\ARMCC\Bin\..\include\math.h
+test\usart.o: E:\keil\ARM\ARMCC\Bin\..\include\string.h
+test\usart.o: E:\keil\ARM\ARMCC\Bin\..\include\stdlib.h
+test\usart.o: E:\keil\ARM\ARMCC\Bin\..\include\stdio.h
+test\usart.o: E:\keil\ARM\ARMCC\Bin\..\include\math.h
 test\usart.o: ../Core/Inc/malloc.h
 test\usart.o: ../Core/Inc/main.h
 test\usart.o: ../Core/Inc/../../User/BSP/OLED/OLED.h
@@ -57,3 +57,4 @@ test\usart.o: ../Core/Inc/usart.h
 test\usart.o: ../Core/Inc/../../User/Control/SteppingMotorControl/SteppingMotorControl.h
 test\usart.o: ../Core/Inc/tim.h
 test\usart.o: ../Core/Inc/../../User/Manager/MsgManage/MsgManage.h
+test\usart.o: ../Core/Inc/../../User/Arm/ArmMoving.h
