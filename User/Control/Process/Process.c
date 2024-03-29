@@ -5,7 +5,7 @@ void testProcess(void)
 {    
 
     for (uint8_t i=0;i<3;i++){
-        getAnD(&controlData,OpennMv_Data.distanse,OpennMv_Data.cx,OpennMv_Data.cy);
+        getAnD(&controlData,OpennMvData.distanse,OpennMvData.cx,OpennMvData.cy);
         servoAction(SPIN, 2360 - (controlData.deltaTheta/3.14*180)*ANGELTOPWM, 3000);
         HAL_Delay(1000);
         motorMove(&motor1, 1600, 0.05, 0.05, -controlData.delteDistanse * DISTOSTEP);
