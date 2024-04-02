@@ -69,7 +69,7 @@ void msDelay(uint16_t nms)
   * @param Delay 要延时的毫秒数
   * @retval None
   */
-void HAL_Delay(uint32_t delay)
-{
-     msDelay(delay);
-}
+//void HAL_Delay(uint32_t delay)
+//{
+//     msDelay(delay);
+//}

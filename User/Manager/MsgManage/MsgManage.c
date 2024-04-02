@@ -39,7 +39,7 @@ float getFloat(uint8_t *point)
 
 void OpenMvDataProcess(FormData *Data)
 {
-	// 检查帧头帧尾
+	/* 检查帧头帧尾*/
 	if (Data->RxBuffer[0] != OpennMvData.frame_head[0])
 		return;
 	if (Data->RxBuffer[1] != OpennMvData.frame_head[1])

@@ -82,7 +82,6 @@ int main(void)
   HAL_Init();
 
   /* USER CODE BEGIN Init */
-  FormDataInit(&OpennMvData);
   armMovingInit(&controlData);    
   /* USER CODE END Init */
 
@@ -180,18 +179,23 @@ int main(void)
                 break;
             case 64:
                 str = "5    ";
+                motorMove(&motor2, 3200, 0.05, 0.05, -30000);
                 break;
             case 67:
                 str = "6    ";
+                motorMove(&motor2, 3200, 0.1, 0.05, 30000);
                 break;
             case 7:
                 str = "7    ";
+                motorMove(&motor2, 3200, 0.1, 0.05, -3200);
                 break;
             case 21:
                 str = "8    ";
+                motorMove(&motor2, 3200, 0.1, 0.05, 3200);
                 break;
             case 9:
                 str = "9    ";
+                shakeMoving(0.1f, 2.0f, 1100);
                 break;
             case 25:
                 str = "0    ";
