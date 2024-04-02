@@ -43,7 +43,7 @@ typedef enum
     AVESPEED = 2,    /* 电机匀速状态 */
     DECEL = 3,       /* 电机减速状态 */
     STOP = 4,        /* 电机停止状态 */
-//    FINE_ADJUST = 5, /* 电机微调状态 */
+    FINEADJUST = 5, /* 电机微调状态 */
 } MotorState;
 
 typedef enum
@@ -103,6 +103,7 @@ extern uint8_t errorBeep;
 
 void motorInit(void);
 void move(uint8_t motor, int32_t v1, float accTime, float decTime, int32_t step);
+void motorMoveFast(MotorControl *motor, int32_t v1, int32_t step);
 void move2Pos(uint8_t motor, int32_t v1, float accTime, float decTime, int32_t pos);
 void motorSpeedControlStar(MotorControl *motor, uint16_t pluse);
 void motorSpeedControlStop(MotorControl *motor);

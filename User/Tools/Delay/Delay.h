@@ -7,6 +7,6 @@
 
 void usDelay(uint32_t nus);            /* —” ±nus */
 void msDelay(uint16_t nms);            /* —” ±nms */
-void HAL_Delay(uint32_t delay);
+//void HAL_Delay(uint32_t delay);
 
 #endif /*__DELAY_H__*/

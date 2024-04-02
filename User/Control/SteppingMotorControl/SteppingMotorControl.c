@@ -332,6 +332,16 @@ void move2Pos(uint8_t motor, int32_t v1, float accTime, float decTime, int32_t p
             break;
     }
 }
+void motorMoveFast(MotorControl *motor, int32_t v1, int32_t step)
+{
+    int32_t flag = 1;
+    if (step < 0)
+    {
+        flag = -1;
+    }
+      float t = (float)(flag * step / v1);
+      motorMove(motor, v1, t, t, step);
+}
 /**
  * @brief 控制电机移动
  *
@@ -381,7 +391,7 @@ uint8_t motorMove(MotorControl *motor, int32_t v1, float accTime, float decTime,
 
     /* 初始化脉冲计数器 */
     motor->ptr = motor->accTab;
-    motor->pulse = (uint32_t)(FREQ / (*motor->ptr));
+    motor->pulse = (uint32_t)(FREQ / (*motor->ptr) / 2);
     motor->ptr++;
 
     motorTIMStar(motor);
@@ -392,16 +402,10 @@ uint8_t motorMove(MotorControl *motor, int32_t v1, float accTime, float decTime,
 void motorMove2Pos(MotorControl *motor, int32_t v1, float accTime, float decTime, int32_t pos)
 {
     int32_t step = pos - motor->actPos;
-    int32_t flag = 1;
     uint8_t err = motorMove(motor, v1, accTime, decTime, step);
-    if (step < 0)
-    {
-        flag = -1;
-    }
    if (err == 2)
    {
-      float t = (float)(flag * step / v1);
-      motorMove(motor, v1, t, t, step);
+     motorMoveFast(motor, v1, step);
    }
 }
 /**
@@ -482,6 +486,10 @@ void motorStateUpgrade(MotorControl *motor)
             motorTIMStop(motor); /* 停止对应PWM通道 */
             printf("motor%d free %d\r\n", motor->motor, getMemoryUsage(OUT));
             motor->state = IDLE; /* 空闲状态 */
+            break;
+        case FINEADJUST:
+            /*控制电机抖动*/
+            
             break;
         case IDLE: /* 空闲状态 */
             break;

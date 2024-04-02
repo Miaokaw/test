@@ -22,6 +22,7 @@ typedef struct _Arm
 
 void armMovingInit(Arm *p);
 void getAnD(Arm *p, float d, float x, float y);     /* 得到舵机运动角度和电机前后运动距离 */
+void shakeMoving(float mMoveRange, float sMoveRange, int servoAngel); 
 
 extern Arm controlData;
 
