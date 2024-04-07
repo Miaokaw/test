@@ -52,7 +52,11 @@
 uint8_t key = 0;
 uint8_t i = 0;
 uint8_t tbuf[40];
+char ch[4] = "stra";
 unsigned char *str;
+
+char aimColor[] = "_red"; //
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -166,6 +170,7 @@ int main(void)
                 break;
             case 70:
                 str = "2    ";
+                usart3Print(aimColor, 1);
                 testProcess();
 
                 break;
@@ -179,11 +184,11 @@ int main(void)
                 break;
             case 64:
                 str = "5    ";
-                motorMove(&motor2, 3200, 0.05, 0.05, -30000);
+                motorMove(&motor2, 6400, 0.71, 0.15, -30000);
                 break;
             case 67:
                 str = "6    ";
-                motorMove(&motor2, 3200, 0.1, 0.05, 30000);
+                motorMove(&motor2, 6400, 0.71, 0.15, 30000);
                 break;
             case 7:
                 str = "7    ";
@@ -195,13 +200,15 @@ int main(void)
                 break;
             case 9:
                 str = "9    ";
-                shakeMoving(0.1f, 2.0f, 1100);
+                shakeMoving(0.02f, 2.0f, 1100);
                 break;
             case 25:
                 str = "0    ";
+                usart3Print("convery", 7);
                 break;
             case 13:
                 str = "#    ";
+                usart3Print("disk", 4);
                 break;
             case 22:
                 str = "*    ";

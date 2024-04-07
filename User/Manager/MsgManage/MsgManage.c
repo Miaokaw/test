@@ -146,3 +146,8 @@ int fputc(int ch, FILE *f)
 	USART1->DR = (uint8_t)ch; /* ��Ҫ���͵��ַ� ch д�뵽DR�Ĵ��� */
 	return ch;
 }
+
+void usart3Print(char *ch, uint8_t len){
+    HAL_UART_Transmit(&huart3, (uint8_t *)ch, len, 0xFF);
+    return ;
+}
