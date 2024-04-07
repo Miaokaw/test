@@ -1,24 +1,34 @@
 #include "Process.h"
 
 uint8_t pass = 0;
+uint8_t aimShape = 0;
 void testProcess(void)
-{    
-
+{   
+    uint8_t aimcolor = (aimColor == "_red")?1:0;
+    usart3Print("convery", 7);
+    while (OpennMvData.color != 2);
+    clawStateChange(OPEN);
+    aimShape = OpennMvData.shape;
+    motorMove(&motor2, 6400, 1, 1, 32000);
+    servoAction(SPIN, 1100, 5000);
+    HAL_Delay(5000);
+    
+    while(OpennMvData.color != aimcolor || OpennMvData.shape != aimShape);
     for(uint8_t i = 0; i < 7; i++){
         getAnD(&controlData,OpennMvData.distanse,OpennMvData.cx,OpennMvData.cy);
         if (controlData.delteDistanse && controlData.deltaTheta){
-            servoAction(SPIN, (int)(1100 - (controlData.deltaTheta * 180.0f / 3.14f)*ANGELTOPWM), 3000);
+            servoAction(SPIN, (int)(1100 - (controlData.deltaTheta * 180.0f / 3.14f)*ANGELTOPWM), 2000);
             motorMoveFast(&motor1, 1600, controlData.delteDistanse * DISTOSTEP);
-            HAL_Delay(4000);
+            HAL_Delay (2000);
             waitS(motor1);
             beepBeep(1);
         }
-    }/*迭代三次，让爪子运动至槽的上方*/
+    }/*迭代七次，让爪子运动至槽的上方*/
     
-    motorMove(&motor2, 3200, 1, 1, 32000);
+    motorMove(&motor2, 6400, 1, 1, 32000);
     waitS(motor2);
     HAL_Delay(1000);
-    motorMove(&motor2, 3200, 1, 1, -32000);
+    motorMove(&motor2, 6400, 1, 1, -32000);
     waitS(motor2);
     beepBeep(1);
 //    servoAction(ARM, 2150, 5000);  舵机运动，控制一二号舵机运动

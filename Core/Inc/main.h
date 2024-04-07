@@ -153,6 +153,9 @@ void Error_Handler(void);
   }
 
 #define waitS(motor) WAIT(motor.state == IDLE)
+#define RED 1
+#define BLUE 0
+extern char aimColor[];
 /* USER CODE END Private defines */
 
 #ifdef __cplusplus

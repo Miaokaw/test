@@ -369,7 +369,7 @@ void USART3_IRQHandler(void)
     HAL_UART_DMAStop(&huart3);
     temp = hdma_usart3_rx.Instance->CNDTR;
     OpennMvData.Rx_len = FORMDATA_RXBUFFER_LEN - temp;
-	OpenMvDataProcess(&OpennMvData);
+    OpenMvDataProcess(&OpennMvData);
   }
   HAL_UART_Receive_DMA(&huart3, OpennMvData.RxBuffer, FORMDATA_RXBUFFER_LEN);
   /* USER CODE END USART3_IRQn 1 */

@@ -12,8 +12,8 @@
 
 typedef struct _Arm
 {
-    int theta;              /* theta  顺时针转动为正 distance 往前运动为正 */
-    float distance;         /* 运动范围为 -distance_max ~ distance_max */
+    int theta;              /* theta  顺时锟斤拷转锟斤拷为锟斤拷 distance 锟斤拷前锟剿讹拷为锟斤拷 */
+    float distance;         /* 锟剿讹拷锟斤拷围为 -distance_max ~ distance_max */
     float x;
     float y;
     float deltaTheta;
@@ -21,7 +21,7 @@ typedef struct _Arm
 }Arm;
 
 void armMovingInit(Arm *p);
-void getAnD(Arm *p, float d, float x, float y);     /* 得到舵机运动角度和电机前后运动距离 */
+void getAnD(Arm *p, float d, float x, float y);     /* 锟矫碉拷锟斤拷锟斤拷硕锟斤拷嵌群偷锟斤拷前锟斤拷锟剿讹拷锟斤拷锟斤拷 */
 void shakeMoving(float mMoveRange, float sMoveRange, int servoAngel); 
 
 extern Arm controlData;
