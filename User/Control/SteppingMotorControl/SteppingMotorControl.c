@@ -225,6 +225,8 @@ uint8_t perTabCal(MotorControl *motorControl, float t, int32_t v0, int32_t v1)
 
     for (int32_t i = 1; i < step; i++)
     {
+        if (perTab[i] < MIN_PWM)
+            perTab[i] = MIN_PWM;   /* 如果时间步最小PWM值，则设置为最小PWM值 */
         ti = 1.0f / perTab[i - 1]; /* 计算ti */
         tSum += ti;                /* 更新tSum */
         if (i < jerkAccStep)
@@ -266,8 +268,8 @@ uint8_t perTabCal(MotorControl *motorControl, float t, int32_t v0, int32_t v1)
 
 uint8_t clawStateChange(ClawState state)
 {
-//    if (clawState == state)
-        //return 1;
+    //    if (clawState == state)
+    // return 1;
     switch (state)
     {
     case OPEN:
@@ -281,7 +283,7 @@ uint8_t clawStateChange(ClawState state)
         break;
     case CIRCLE:
         motorMove2Pos(&motor4, 6400, 0.5, 0.5, 1500);
-    break;
+        break;
     default:
         break;
     }
@@ -291,45 +293,45 @@ uint8_t clawStateChange(ClawState state)
 
 void move(uint8_t motor, int32_t v1, float accTime, float decTime, int32_t step)
 {
-    switch(motor)
+    switch (motor)
     {
-        case 1:
-            motorMove(&motor1, v1, accTime, decTime, step);
-            break;
-        case 2:
-            motorMove(&motor2, v1, accTime, decTime, step);
-            break;
-        case 3:
-            motorMove(&motor3, v1, accTime, decTime, step);
-            break;
-        case 4:
-            motorMove(&motor4, v1, accTime, decTime, step);
-            break;
-        case 5:
-            motorMove(&motor5, v1, accTime, decTime, step);
-            break;
+    case 1:
+        motorMove(&motor1, v1, accTime, decTime, step);
+        break;
+    case 2:
+        motorMove(&motor2, v1, accTime, decTime, step);
+        break;
+    case 3:
+        motorMove(&motor3, v1, accTime, decTime, step);
+        break;
+    case 4:
+        motorMove(&motor4, v1, accTime, decTime, step);
+        break;
+    case 5:
+        motorMove(&motor5, v1, accTime, decTime, step);
+        break;
     }
 }
 
 void move2Pos(uint8_t motor, int32_t v1, float accTime, float decTime, int32_t pos)
 {
-    switch(motor)
+    switch (motor)
     {
-        case 1:
-            motorMove2Pos(&motor1, v1, accTime, decTime, pos);
-            break;
-        case 2:
-            motorMove2Pos(&motor2, v1, accTime, decTime, pos);
-            break;
-        case 3:
-            motorMove2Pos(&motor3, v1, accTime, decTime, pos);
-            break;
-        case 4:
-            motorMove2Pos(&motor4, v1, accTime, decTime, pos);
-            break;
-        case 5:
-            motorMove2Pos(&motor5, v1, accTime, decTime, pos);
-            break;
+    case 1:
+        motorMove2Pos(&motor1, v1, accTime, decTime, pos);
+        break;
+    case 2:
+        motorMove2Pos(&motor2, v1, accTime, decTime, pos);
+        break;
+    case 3:
+        motorMove2Pos(&motor3, v1, accTime, decTime, pos);
+        break;
+    case 4:
+        motorMove2Pos(&motor4, v1, accTime, decTime, pos);
+        break;
+    case 5:
+        motorMove2Pos(&motor5, v1, accTime, decTime, pos);
+        break;
     }
 }
 void motorMoveFast(MotorControl *motor, int32_t v1, int32_t step)
@@ -339,8 +341,8 @@ void motorMoveFast(MotorControl *motor, int32_t v1, int32_t step)
     {
         flag = -1;
     }
-      float t = (float)(flag * step / v1);
-      motorMove(motor, v1, t, t, step);
+    float t = (float)(flag * step / v1);
+    motorMove(motor, v1, t, t, step);
 }
 /**
  * @brief 控制电机移动
@@ -403,10 +405,10 @@ void motorMove2Pos(MotorControl *motor, int32_t v1, float accTime, float decTime
 {
     int32_t step = pos - motor->actPos;
     uint8_t err = motorMove(motor, v1, accTime, decTime, step);
-   if (err == 2)
-   {
-     motorMoveFast(motor, v1, step);
-   }
+    if (err == 2)
+    {
+        motorMoveFast(motor, v1, step);
+    }
 }
 /**
  * @brief 步进电机超限保护
@@ -419,21 +421,21 @@ void motorPosProtect(MotorControl *motor)
         motor->actPos++;
     else
         motor->actPos--;
-//    if (motor->actPos >= 0 && motor->actPos <= motor->maxPos)
-//        return;
-//    if (motor->actPos < 0)
-//    {
-//        motor->actPos = 0;
-//        motor->state = STOP;
-//    }
-//    else if (motor->actPos > motor->maxPos)
-//    {
-//        motor->actPos = motor->maxPos;
-//        motor->state = STOP;
-//    }
-//    errorBeep = 1;
-//    myfree(OUT, motor->accTab);
-//    myfree(OUT, motor->decTab);
+    //    if (motor->actPos >= 0 && motor->actPos <= motor->maxPos)
+    //        return;
+    //    if (motor->actPos < 0)
+    //    {
+    //        motor->actPos = 0;
+    //        motor->state = STOP;
+    //    }
+    //    else if (motor->actPos > motor->maxPos)
+    //    {
+    //        motor->actPos = motor->maxPos;
+    //        motor->state = STOP;
+    //    }
+    //    errorBeep = 1;
+    //    myfree(OUT, motor->accTab);
+    //    myfree(OUT, motor->decTab);
 }
 
 /**
@@ -457,7 +459,10 @@ void motorStateUpgrade(MotorControl *motor)
         switch (motor->state) /* 根据当前状态进行判断 */
         {
         case ACCEL: /* 加速状态 */
-            motor->pulse = (uint16_t)(FREQ / *motor->ptr / 2);
+            if (*motor->ptr == 0)
+                motor->pulse = (uint16_t)(FREQ / motor->v1 / 2);
+            else
+                motor->pulse = (uint16_t)(FREQ / *motor->ptr / 2);
             motor->ptr++; /* 指针加1 */
             if (motor->pos >= motor->accStep)
             {
@@ -489,7 +494,7 @@ void motorStateUpgrade(MotorControl *motor)
             break;
         case FINEADJUST:
             /*控制电机抖动*/
-            
+
             break;
         case IDLE: /* 空闲状态 */
             break;
